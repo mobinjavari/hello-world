@@ -33,7 +33,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to right, rgb(53, 149, 194), rgb(37, 224, 115));
+    background: linear-gradient(to right, #3595c2, #3a4e92);
     text-align: center;
     padding: 16px 10px;
     box-shadow: -1px -14px 40px -6px rgba(0, 0, 0, 1) inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -132,7 +132,7 @@ body {
 #about {
     background-color: #101010;
     display: block;
-    margin: 60px 20px;
+    margin: 120px 20px;
 }
 #about>#box-about {
     background-color: #181818;
@@ -188,7 +188,7 @@ body {
 #comment {
     background-color: #101010;
     display: block;
-    margin: 60px 20px;
+    margin: 120px 20px;
     color: #fff;
 }
 #comment>#box-comment {
@@ -254,7 +254,7 @@ body {
     box-shadow: 11px 16px 20px -20px rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     border-radius: 20px;
     padding: 10px 16px;
-    margin: 10px auto 0 auto;
+    margin: 30px auto 0 auto;
     width: 86%;
 }
 #body-comments>.title-body {
@@ -297,29 +297,28 @@ body {
     position: relative;
     bottom: 15px;
 }
-#body-comments>.reply-comments {
-    padding: 40px 14px 0px 8px;
-    border: 1px solid rgb(44, 44, 44);
-    border-radius: 20px;
-}
+
 
 /* BoxList Style's */
 
 #BoxList {
     background-color: #101010;
+    margin: 120px 20px;
 }
 #BoxList .list-box {
+    top: 0;
     transition: ease .7s;
     background-color: #181818;
     border-radius: 20px;
     padding: 10px 14px;
+    height:350px ;
     box-shadow: -26px -26px 60px -12px rgba(102, 102, 102, 0.25) inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 #BoxList .list-box:hover{
     background-color: #3a4e92;
     border-radius: 20px;
     padding: 10px 14px;
-     box-shadow: rgba(0, 0, 0, 0.6) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
 }
 #BoxList .icon-list-box {
     font-size: 60px;
@@ -342,7 +341,7 @@ body {
 
 #footer {
     margin: 50px 0 0 0;
-    padding: 20px 14px 20px 14px;
+    padding: 20px 14px 0px 14px;
     background-color: #151515;
 }
 
@@ -351,7 +350,12 @@ body {
 /* Coppy Right Style's */
 
 #CoppyRight {
-    background-color: azure;
+    background-color: #101010;
+    margin: 20px 0 0 0;
+    padding: 30px 20px 30px 20px;
+    text-align: center;
+    direction: ltr;
+    border-radius: 20px 20px 0 0;
 }
 
 
@@ -427,7 +431,7 @@ a {
     display: block;
     text-align: center;
     width: 92%;
-    max-width: 1200px;
+    max-width: 1500px;
 }
 
 
@@ -435,8 +439,10 @@ a {
     margin: 10px 4px 10px 4px;
 }
 
+
 @media only screen and (min-width:1200px) {
     .col-2 {
+        flex: 0 0 auto;
         width: 16% !important;
         display: inline-block !important;
         margin: 6px 4px 6px 4px !important;
@@ -445,6 +451,7 @@ a {
 
 @media only screen and (min-width:100px) {
     .col-3 {
+        flex: 0 0 auto;
         width: 23.8% !important;
         display: inline-block !important;
         margin: 100px 4px 6px 4px !important;
@@ -453,6 +460,7 @@ a {
 
 @media only screen and (min-width:880px) {
     .col-4 {
+        flex: 0 0 auto;
         width: 32% !important;
         display: inline-block !important;
         margin: 6px 4px 6px 4px !important;
@@ -461,6 +469,7 @@ a {
 
 @media only screen and (min-width:600px) {
     .col-6 {
+        flex: 0 0 auto;
         width: 48.8% !important;
         display: inline-block !important;
         margin: 6px 4px 6px 4px !important;
@@ -471,6 +480,7 @@ a {
 
 @media only screen and (min-width:1000px) {
     .rwd {
+        flex: 0 0 auto;
         width: 23.8%;
         display: inline-block;
         margin: 6px 4px 6px 4px !important;
@@ -479,6 +489,7 @@ a {
 
 @media only screen and (min-width:880px) {
     .rwd {
+        flex: 0 0 auto;
         width: 32% ;
         display: inline-block;
         margin: 6px 4px 6px 4px !important;
@@ -487,6 +498,7 @@ a {
 
 @media only screen and (min-width:600px) {
     .rwd {
+        flex: 0 0 auto;
         width: 48%;
         display: inline-block;
         margin: 6px 4px 6px 4px !important;
