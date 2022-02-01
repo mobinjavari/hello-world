@@ -1,0 +1,495 @@
+/* Project Hello World Css Style's */
+
+/* Developer Mobin Javari */
+
+/* About Developer : Https://MobinJavari.IR/ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+
+
+/* Body Style's */
+
+body {
+    background-color: #101010;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'vazir';
+    direction: rtl;
+    text-align: right;
+} 
+ 
+
+
+/* Top Bar Style's */
+
+#TopBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgb(53, 149, 194), rgb(37, 224, 115));
+    text-align: center;
+    padding: 16px 10px;
+    box-shadow: -1px -14px 40px -6px rgba(0, 0, 0, 1) inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    margin: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-zoom: none;
+    cursor: not-allowed;
+}
+#TopBar>.text-topbar, #TopBar>.link-topbar {
+    display: inline;
+    font-size: 15px;
+    user-select: none;
+    -moz-user-select: none;
+    user-zoom: none;
+    cursor: not-allowed;
+}
+#TopBar>.link-topbar {
+    /*background-color: #fff;*/
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+
+
+/* Header Style's */
+
+#header {
+    margin-top: 55px;
+    transition: ease .7s;
+    position: sticky;
+    top: 0;
+    background-color: #151515;
+    padding: 26px 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    z-index: 10;
+}
+.max-width-1200{
+    max-width: 1200px;
+    margin: auto;
+}
+#header .title-header ,#header ul ,#header ul li ,#header .logo-header{
+    display: inline;
+}
+#header .title-header {
+    color: oldlace;
+    font-size: 25px;
+}
+#header ul {
+    float: left;
+    margin: 1% 1px 1px 1px;
+}
+
+
+
+/* Main Style's */
+
+#main {
+    margin: 0 auto 0 auto;
+    padding:0;
+    max-width: 1200px;
+}
+
+
+
+/* Article Style's */
+
+#article {
+    background-color: #101010;
+    display: block;
+    margin: 30px 20px;
+}
+#article>.title-article {
+    padding: 2px 6px 2px 2px;
+    font-size: 30px;
+}
+#article .avatar-article {
+    width: 96% !important;
+    margin: 40px auto 20px auto;
+}
+#article>.text-article {
+    margin: 2px 10px;
+    padding: 2px 3%;
+    text-align: justify;
+}
+
+
+
+/* About Style's */
+
+#about {
+    background-color: #101010;
+    display: block;
+    margin: 60px 20px;
+}
+#about>#box-about {
+    background-color: #181818;
+    box-shadow: 11px 16px 20px -20px rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border-radius: 20px;
+    padding: 10px 16px;
+    width: 95%;
+}
+#about>#box-about>.title-box {
+    display: inline;
+}
+#about>#box-about>.title-box>.img-box {
+    width: 100px;
+    height: 100px;
+    display: inline;
+    border-radius: 50px;
+    position: relative;
+    bottom: 26px;
+    left: 20px;
+    z-index: 1;
+    object-fit:cover;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-zoom: none;
+    cursor: no-drop;
+}
+#about>#box-about>.title-box>.name-box {
+    display: inline;
+    position: relative;
+    bottom: 65px;
+    font-size: 24px;
+}
+#about>#box-about>.title-box>.link-box {
+    display: inline;
+    position: relative;
+    top: 14px;
+    left: 8px;
+    float: left;
+    font-size: 20px;
+}
+#about>#box-about>.body-box {
+    font-size: 16px;
+    padding: 1px 6px 1px 1px;
+    position: relative;
+    bottom: 15px;
+}
+
+
+/* Comments Style's */
+
+#comment {
+    background-color: #101010;
+    display: block;
+    margin: 60px 20px;
+    color: #fff;
+}
+#comment>#box-comment {
+    background-color: #181818;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border-radius: 20px;
+    padding: 10px 16px;
+    width: 95%;
+    z-index: 2;
+    position: relative;
+}
+#comment>#box-comment .title-box .name-box {
+    padding: 10px 0 20px 0;
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 1px solid #414141;
+    color: #808080;
+}
+#comment>#box-comment .comment-textarea {
+    background-color: #333333;
+    border-radius: 20px;
+    margin: 30px 10px 10px 10px;
+    width: 95%;
+    height: 200px;
+    color: #fff;
+    text-align: right;
+    padding: 14px 10px;
+}
+#comment>#box-comment .submit-box {
+    background-color: rgba(58, 58, 58, 0.87);
+    color: rgb(173, 173, 173);
+    padding: 15px 50px;
+    border-radius: 20px;
+    margin: 1px 10px 10px 1px;
+    cursor: no-drop;
+}
+#comment>#click-comment {
+    text-align: center;
+}
+.click-show-comment{
+    transition: ease .7s;
+    background-color: #3a3a3ad0;
+    color: rgb(212, 212, 212);
+    padding: 50px 14px 10px 10px;
+    position: relative;
+    bottom: 38px;
+    z-index: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 15px;
+}
+.click-show-comment:hover {
+    background-color: #3a3a3ae7;
+}
+#comments {
+    display: none;
+    transition: ease 1s;
+}
+#body-comments {
+    transition: ease .7s;
+    background-color: #181818;
+    box-shadow: 11px 16px 20px -20px rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border-radius: 20px;
+    padding: 10px 16px;
+    margin: 10px auto 0 auto;
+    width: 86%;
+}
+#body-comments>.title-body {
+    display: inline;
+}
+#body-comments>.title-body>.img-body {
+    width: 100px;
+    height: 100px;
+    display: inline;
+    border-radius: 50px;
+    position: relative;
+    bottom: 26px;
+    left: 20px;
+    z-index: 1;
+    object-fit:cover;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-zoom: none;
+    cursor: not-allowed;
+}
+#body-comments>.title-body>.name-body {
+    display: inline;
+    position: relative;
+    bottom: 65px;
+    font-size: 24px;
+}
+#body-comments>.title-body>.link-body {
+    display: inline;
+    position: relative;
+    top: 14px;
+    left: 8px;
+    float: left;
+    font-size: 20px;
+}
+#body-comments>.main-body {
+    font-size: 16px;
+    padding: 1px 6px 1px 1px;
+    position: relative;
+    bottom: 15px;
+}
+#body-comments>.reply-comments {
+    padding: 40px 14px 0px 8px;
+    border: 1px solid rgb(44, 44, 44);
+    border-radius: 20px;
+}
+
+/* BoxList Style's */
+
+#BoxList {
+    background-color: #101010;
+}
+#BoxList .list-box {
+    transition: ease .7s;
+    background-color: #181818;
+    border-radius: 20px;
+    padding: 10px 14px;
+    box-shadow: -26px -26px 60px -12px rgba(102, 102, 102, 0.25) inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+#BoxList .list-box:hover{
+    background-color: #3a4e92;
+    border-radius: 20px;
+    padding: 10px 14px;
+     box-shadow: rgba(0, 0, 0, 0.6) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+}
+#BoxList .icon-list-box {
+    font-size: 60px;
+    color: #fff;
+}
+#BoxList .title-list-box {
+    border-top: 1px solid rgb(105, 105, 105);
+    padding: 30px 8px 20px 8px;
+    font-size: 22px;
+}
+#BoxList .body-list-box {
+    margin: 10px 30px 30px 0;
+    text-align: right;
+    color: rgb(141, 141, 141);
+}
+
+
+
+/* Footer Style's */
+
+#footer {
+    margin: 50px 0 0 0;
+    padding: 20px 14px 20px 14px;
+    background-color: #151515;
+}
+
+
+
+/* Coppy Right Style's */
+
+#CoppyRight {
+    background-color: azure;
+}
+
+
+
+/* Tag Style's */
+
+strong {
+    font-size: 24px;
+}
+
+img {
+    max-width: 1200px;
+    border-radius: 24px;
+}
+
+p {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+/* Fix Style's */
+
+.cursor-click {
+    cursor: pointer;
+} 
+
+.text {
+    max-width: 1000px;
+    margin: 5px auto;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+    /* float: right; */
+}
+
+.ltr {
+    direction: ltr;
+    text-align: left;
+    float: left;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+
+
+/* More Style's */
+
+.container {
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 92%;
+    max-width: 1200px;
+}
+
+
+.col-2, .col-3, .col-4, .col-6 ,.rwd {
+    margin: 10px 4px 10px 4px;
+}
+
+@media only screen and (min-width:1200px) {
+    .col-2 {
+        width: 16% !important;
+        display: inline-block !important;
+        margin: 6px 4px 6px 4px !important;
+    }
+}
+
+@media only screen and (min-width:100px) {
+    .col-3 {
+        width: 23.8% !important;
+        display: inline-block !important;
+        margin: 100px 4px 6px 4px !important;
+    }
+}
+
+@media only screen and (min-width:880px) {
+    .col-4 {
+        width: 32% !important;
+        display: inline-block !important;
+        margin: 6px 4px 6px 4px !important;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .col-6 {
+        width: 48.8% !important;
+        display: inline-block !important;
+        margin: 6px 4px 6px 4px !important;
+    }
+}
+
+/* RWD Respon Box */
+
+@media only screen and (min-width:1000px) {
+    .rwd {
+        width: 23.8%;
+        display: inline-block;
+        margin: 6px 4px 6px 4px !important;
+    }
+}
+
+@media only screen and (min-width:880px) {
+    .rwd {
+        width: 32% ;
+        display: inline-block;
+        margin: 6px 4px 6px 4px !important;
+    }
+}
+
+@media only screen and (min-width:600px) {
+    .rwd {
+        width: 48%;
+        display: inline-block;
+        margin: 6px 4px 6px 4px !important;
+    }
+}
+
