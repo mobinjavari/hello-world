@@ -10,6 +10,7 @@
     padding: 0;
     border: 0;
     outline: 0;
+    box-sizing: border-box;
 }
 
 
@@ -76,7 +77,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
     z-index: 10;
 }
-.max-width-1200{
+#header>.max-width{
     max-width: 1200px;
     margin: auto;
 }
@@ -96,10 +97,15 @@ body {
 
 /* Main Style's */
 
+.site {
+    background-color: #101010;
+}
+
 #main {
     margin: 0 auto 0 auto;
-    padding:0;
+    padding: 10px 0 40px 0;
     max-width: 1200px;
+    background-color: #101010;
 }
 
 
@@ -109,14 +115,14 @@ body {
 #article {
     background-color: #101010;
     display: block;
-    margin: 30px 20px;
+    margin: 30px 10px;
 }
 #article>.title-article {
     padding: 2px 6px 2px 2px;
     font-size: 30px;
 }
 #article .avatar-article {
-    width: 96% !important;
+    width: 98% !important;
     margin: 40px auto 20px auto;
 }
 #article>.text-article {
@@ -132,14 +138,14 @@ body {
 #about {
     background-color: #101010;
     display: block;
-    margin: 120px 20px;
+    padding: 10px 10px;
 }
 #about>#box-about {
     background-color: #181818;
     box-shadow: 11px 16px 20px -20px rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     border-radius: 20px;
-    padding: 10px 16px;
-    width: 95%;
+    width: 98%;
+    margin: 40px auto 20px auto;
 }
 #about>#box-about>.title-box {
     display: inline;
@@ -151,7 +157,7 @@ body {
     border-radius: 50px;
     position: relative;
     bottom: 26px;
-    left: 20px;
+    left: 10px;
     z-index: 1;
     object-fit:cover;
     user-select: none;
@@ -166,12 +172,13 @@ body {
     position: relative;
     bottom: 65px;
     font-size: 24px;
+    line-height: 3;
 }
 #about>#box-about>.title-box>.link-box {
     display: inline;
     position: relative;
     top: 14px;
-    left: 8px;
+    left: 20px;
     float: left;
     font-size: 20px;
 }
@@ -188,20 +195,19 @@ body {
 #comment {
     background-color: #101010;
     display: block;
-    margin: 120px 20px;
-    color: #fff;
+    padding: 10px 10px 40px 10px;
 }
 #comment>#box-comment {
     background-color: #181818;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     border-radius: 20px;
-    padding: 10px 16px;
-    width: 95%;
+    width: 98%;
+    margin: 40px auto 20px auto;
     z-index: 2;
     position: relative;
 }
 #comment>#box-comment .title-box .name-box {
-    padding: 10px 0 20px 0;
+    padding: 15px 20px;
     text-align: center;
     font-size: 24px;
     border-bottom: 1px solid #414141;
@@ -210,12 +216,12 @@ body {
 #comment>#box-comment .comment-textarea {
     background-color: #333333;
     border-radius: 20px;
-    margin: 30px 10px 10px 10px;
-    width: 95%;
+    width: 94%;
     height: 200px;
     color: #fff;
     text-align: right;
     padding: 14px 10px;
+    margin: 40px 10px;
 }
 #comment>#box-comment .submit-box {
     background-color: rgba(58, 58, 58, 0.87);
@@ -223,7 +229,7 @@ body {
     padding: 15px 50px;
     border-radius: 20px;
     margin: 1px 10px 10px 1px;
-    cursor: no-drop;
+    cursor: pointer;
 }
 #comment>#click-comment {
     text-align: center;
@@ -234,7 +240,7 @@ body {
     color: rgb(212, 212, 212);
     padding: 50px 14px 10px 10px;
     position: relative;
-    bottom: 38px;
+    bottom: 55px;
     z-index: 1;
     border-radius: 20px;
     cursor: pointer;
@@ -255,7 +261,7 @@ body {
     border-radius: 20px;
     padding: 10px 16px;
     margin: 30px auto 0 auto;
-    width: 86%;
+    width: 90%;
 }
 #body-comments>.title-body {
     display: inline;
@@ -303,7 +309,7 @@ body {
 
 #BoxList {
     background-color: #101010;
-    margin: 120px 20px;
+    padding: 40px 10px;
 }
 #BoxList .list-box {
     top: 0;
@@ -340,8 +346,8 @@ body {
 /* Footer Style's */
 
 #footer {
-    margin: 50px 0 0 0;
-    padding: 20px 14px 0px 14px;
+    margin: 0 0 55px 0;
+    padding: 40px 14px 40px 14px;
     background-color: #151515;
 }
 
@@ -350,12 +356,21 @@ body {
 /* Coppy Right Style's */
 
 #CoppyRight {
-    background-color: #101010;
-    margin: 20px 0 0 0;
-    padding: 30px 20px 30px 20px;
+    position: fixed;
+    bottom: 0;
+    z-index: -5;
+    width: 100%;
+    background: linear-gradient(to right, #3595c2, #3a4e92);
     text-align: center;
-    direction: ltr;
-    border-radius: 20px 20px 0 0;
+    padding: 16px 10px;
+    box-shadow: -1px -14px 40px -6px rgba(0, 0, 0, 1) inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    margin: 0 auto 0 auto;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    user-zoom: none;
+    cursor: not-allowed;
 }
 
 
@@ -430,8 +445,8 @@ a {
     margin: auto;
     display: block;
     text-align: center;
-    width: 92%;
-    max-width: 1500px;
+    width: 98%;
+    max-width: 1200px;
 }
 
 
@@ -505,3 +520,11 @@ a {
     }
 }
 
+@media only screen and (max-width:540px) {
+    #TopBar {
+        display: none !important;
+    }
+    #header {
+        margin-top: 0;
+    }
+}
