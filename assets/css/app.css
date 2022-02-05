@@ -17,7 +17,7 @@
 
 /* Body Style's */
 
-body {
+.body {
     background-color: #101010;
     color: #ffffff;
     font-size: 15px;
@@ -30,14 +30,15 @@ body {
 
 /* Top Bar Style's */
 
-#TopBar {
+.top-bar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: linear-gradient(to right, #3595c2, #3a4e92);
+    height: 60px;
+    background: linear-gradient(to right, #213672, #39519e);
     text-align: center;
     padding: 16px 10px;
-    box-shadow: -1px -14px 40px -6px rgba(0, 0, 0, 1) inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: 0px -20px 40px -6px rgb(0 0 0 / 70%) inset;
     margin: 0;
     user-select: none;
     -moz-user-select: none;
@@ -46,7 +47,7 @@ body {
     user-zoom: none;
     cursor: not-allowed;
 }
-#TopBar>.text-topbar, #TopBar>.link-topbar {
+.top-bar__text, .top-bar__link {
     display: inline;
     font-size: 15px;
     user-select: none;
@@ -54,45 +55,53 @@ body {
     user-zoom: none;
     cursor: not-allowed;
 }
-#TopBar>.link-topbar {
+.top-bar__link {
     /*background-color: #fff;*/
     border: 1px solid #fff;
     border-radius: 10px;
     color: #ffffff;
     padding: 2px 10px;
     cursor: pointer;
+    transition: .5s;
+}
+.top-bar__link:hover {
+    background-color: #fff;
+    color: #000;
+    transition: .8s;
 }
 
 
 
 /* Header Style's */
 
-#header {
-    margin-top: 55px;
+.header {
+    margin-top: 52px;
     transition: ease .7s;
     position: sticky;
     top: 0;
     background-color: #151515;
     padding: 26px 20px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgb(0 0 0 / 40%) 0px 15px 40px 8px;
     z-index: 10;
 }
-#header>.max-width{
+.header-area{
     max-width: 1200px;
     margin: auto;
 }
-#header .title-header ,#header ul ,#header ul li ,#header .logo-header{
+.header-area__title, .header-list, .header-list__link {
     display: inline;
 }
-#header .title-header {
+.header-area__title {
     color: oldlace;
     font-size: 25px;
 }
-#header ul {
+.header-list {
     float: left;
     margin: 1% 1px 1px 1px;
 }
-
+.header-list__link {
+    padding: 0 5px 0 5px;
+}
 
 
 /* Main Style's */
@@ -101,7 +110,7 @@ body {
     background-color: #101010;
 }
 
-#main {
+.main {
     margin: 0 auto 0 auto;
     padding: 10px 0 40px 0;
     max-width: 1200px;
@@ -112,20 +121,21 @@ body {
 
 /* Article Style's */
 
-#article {
+.article {
     background-color: #101010;
     display: block;
     margin: 30px 10px;
 }
-#article>.title-article {
+.article__title {
     padding: 2px 6px 2px 2px;
     font-size: 30px;
 }
-#article .avatar-article {
+.article__avatar {
     width: 98% !important;
     margin: 40px auto 20px auto;
+    box-shadow: rgb(0 0 0 / 20%) 9px 9px 15px 4px;
 }
-#article>.text-article {
+.article__text {
     margin: 2px 10px;
     padding: 2px 3%;
     text-align: justify;
@@ -135,22 +145,22 @@ body {
 
 /* About Style's */
 
-#about {
+.about {
     background-color: #101010;
     display: block;
     padding: 10px 10px;
 }
-#about>#box-about {
+.about-box {
     background-color: #181818;
-    box-shadow: 11px 16px 20px -20px rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
     border-radius: 20px;
     width: 98%;
     margin: 40px auto 20px auto;
 }
-#about>#box-about>.title-box {
+.about-bar {
     display: inline;
 }
-#about>#box-about>.title-box>.img-box {
+.about-bar__img {
     width: 100px;
     height: 100px;
     display: inline;
@@ -166,15 +176,16 @@ body {
     -webkit-user-drag: none;
     user-zoom: none;
     cursor: no-drop;
+    box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
 }
-#about>#box-about>.title-box>.name-box {
+.about-bar__name {
     display: inline;
     position: relative;
     bottom: 65px;
     font-size: 24px;
     line-height: 3;
 }
-#about>#box-about>.title-box>.link-box {
+.details {
     display: inline;
     position: relative;
     top: 14px;
@@ -182,39 +193,47 @@ body {
     float: left;
     font-size: 20px;
 }
-#about>#box-about>.body-box {
+.details__view, .details__like {
+    color: #fff;
+    font-size: 15px;
+    margin: 0 8px 0 8px;
+}
+.about-body {
     font-size: 16px;
     padding: 1px 6px 1px 1px;
     position: relative;
     bottom: 15px;
 }
+.about-body__text {
+    font-size: 15px;
+}
 
 
 /* Comments Style's */
 
-#comment {
+.comment {
     background-color: #101010;
     display: block;
     padding: 10px 10px 40px 10px;
 }
-#comment>#box-comment {
+.comment-box {
     background-color: #181818;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
     border-radius: 20px;
     width: 98%;
     margin: 40px auto 20px auto;
     z-index: 2;
     position: relative;
 }
-#comment>#box-comment .title-box .name-box {
-    padding: 15px 20px;
+.comment-form__title {
+    padding: 25px 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     border-bottom: 1px solid #414141;
     color: #808080;
 }
-#comment>#box-comment .comment-textarea {
-    background-color: #333333;
+.comment-form__textarea {
+    background-color: #303030;
     border-radius: 20px;
     width: 94%;
     height: 200px;
@@ -222,51 +241,58 @@ body {
     text-align: right;
     padding: 14px 10px;
     margin: 40px 10px;
+    font-size: 16px;
+    box-shadow: inset rgb(0 0 0 / 20%) 9px 9px 10px 0px;
 }
-#comment>#box-comment .submit-box {
+.comment-form__submit {
     background-color: rgba(58, 58, 58, 0.87);
     color: rgb(173, 173, 173);
     padding: 15px 50px;
     border-radius: 20px;
     margin: 1px 10px 10px 1px;
     cursor: pointer;
+    box-shadow: rgb(0 0 0 / 10%) 9px 9px 10px 0px;
 }
-#comment>#click-comment {
-    text-align: center;
-}
-.click-show-comment{
+
+
+.toggle-show-comments{
     transition: ease .7s;
-    background-color: #3a3a3ad0;
+    background-color: #303030;
     color: rgb(212, 212, 212);
     padding: 50px 14px 10px 10px;
     position: relative;
-    bottom: 55px;
+    bottom: 65px;
     z-index: 1;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 500;
     font-size: 15px;
+    text-align: center;
+    width: 150px;
+    height: 100px;
+    box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
 }
-.click-show-comment:hover {
+.toggle-show-comments:hover {
     background-color: #3a3a3ae7;
 }
-#comments {
-    display: none;
+
+
+.comment-list {
     transition: ease 1s;
 }
-#body-comments {
+.comment-item {
     transition: ease .7s;
     background-color: #181818;
-    box-shadow: 11px 16px 20px -20px rgba(0, 0, 0, 0.41), rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
     border-radius: 20px;
     padding: 10px 16px;
     margin: 30px auto 0 auto;
     width: 90%;
 }
-#body-comments>.title-body {
+.comment-item-body {
     display: inline;
 }
-#body-comments>.title-body>.img-body {
+.comment-item-body__img {
     width: 100px;
     height: 100px;
     display: inline;
@@ -282,60 +308,48 @@ body {
     -webkit-user-drag: none;
     user-zoom: none;
     cursor: not-allowed;
+    box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
 }
-#body-comments>.title-body>.name-body {
+.comment-item-body__name {
     display: inline;
     position: relative;
     bottom: 65px;
     font-size: 24px;
 }
-#body-comments>.title-body>.link-body {
-    display: inline;
-    position: relative;
-    top: 14px;
-    left: 8px;
-    float: left;
-    font-size: 20px;
-}
-#body-comments>.main-body {
-    font-size: 16px;
-    padding: 1px 6px 1px 1px;
-    position: relative;
-    bottom: 15px;
-}
 
 
 /* BoxList Style's */
 
-#BoxList {
+.box-list {
     background-color: #101010;
     padding: 40px 10px;
 }
-#BoxList .list-box {
+.box-item {
     top: 0;
-    transition: ease .7s;
+    transition: .5s;
     background-color: #181818;
     border-radius: 20px;
     padding: 10px 14px;
     height:350px ;
-    box-shadow: -26px -26px 60px -12px rgba(102, 102, 102, 0.25) inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: rgb(0 0 0 / 20%) 9px 9px 15px 4px;
 }
-#BoxList .list-box:hover{
-    background-color: #3a4e92;
+.box-item:hover {
+    transition: .5s;
+    background: linear-gradient(to right, #213672b3, #39519ebf);
     border-radius: 20px;
     padding: 10px 14px;
-    box-shadow: rgba(0, 0, 0, 0.6) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.6) 0px 18px 36px -18px inset;
+    box-shadow: rgb(0 0 0 / 30%) -12px -12px 20px 0px inset,rgb(0 0 0 / 20%) 9px 9px 10px 0px;
 }
-#BoxList .icon-list-box {
+.box-item__icon {
     font-size: 60px;
     color: #fff;
 }
-#BoxList .title-list-box {
+.box-item__title {
     border-top: 1px solid rgb(105, 105, 105);
     padding: 30px 8px 20px 8px;
     font-size: 22px;
 }
-#BoxList .body-list-box {
+.box-item__body {
     margin: 10px 30px 30px 0;
     text-align: right;
     color: rgb(141, 141, 141);
@@ -345,25 +359,27 @@ body {
 
 /* Footer Style's */
 
-#footer {
-    margin: 0 0 55px 0;
+.footer {
+    margin: 0 0 80px 0;
     padding: 40px 14px 40px 14px;
     background-color: #151515;
+    box-shadow: rgb(0 0 0 / 50%) 0px 18px 40px 10px;
 }
 
 
 
 /* Coppy Right Style's */
 
-#CoppyRight {
+.CoppyRight {
     position: fixed;
     bottom: 0;
+    right: 0;
     z-index: -5;
     width: 100%;
-    background: linear-gradient(to right, #3595c2, #3a4e92);
+    height: 80px;
+    background: linear-gradient(to right, #213672, #39519e);
     text-align: center;
     padding: 16px 10px;
-    box-shadow: -1px -14px 40px -6px rgba(0, 0, 0, 1) inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     margin: 0 auto 0 auto;
     user-select: none;
     -moz-user-select: none;
@@ -397,9 +413,9 @@ a {
 
 
 
-/* Fix Style's */
+/* Fixed Style's */
 
-.cursor-click {
+.cursor-pointer {
     cursor: pointer;
 } 
 
@@ -439,7 +455,7 @@ a {
 
 
 
-/* More Style's */
+/* Responsive Box */
 
 .container {
     margin: auto;
@@ -450,7 +466,7 @@ a {
 }
 
 
-.col-2, .col-3, .col-4, .col-6 ,.rwd {
+.col-2, .col-3, .col-4, .col-6, .rwd {
     margin: 10px 4px 10px 4px;
 }
 
@@ -491,8 +507,6 @@ a {
     }
 }
 
-/* RWD Respon Box */
-
 @media only screen and (min-width:1000px) {
     .rwd {
         flex: 0 0 auto;
@@ -521,10 +535,20 @@ a {
 }
 
 @media only screen and (max-width:540px) {
-    #TopBar {
+    .top-bar {
+        /* display: none !important; */
+        height: 90px;
+    }
+    .top-bar__link {
         display: none !important;
     }
-    #header {
-        margin-top: 0;
+    .header {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 466px) {
+    .header {
+        margin-top: 74px;
     }
 }

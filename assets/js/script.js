@@ -1,16 +1,32 @@
 
 
-function ShowComments()
+function ToggleShowComments()
 {
-    if(window.document.getElementById('comments').style.display == "none"){
-        window.document.getElementById('comments').style.display = "inline";
+    if(window.document.getElementsByClassName('comment-list')[0].style.display == "none"){
+        window.document.getElementsByClassName('comment-list')[0].style.display = "inline";
+        window.document.getElementsByClassName('toggle-show-comments')[0].textContent = "بستن نظرات ...";
+
     }
-    else if(window.document.getElementById('comments').style.display == "inline"){
-        window.document.getElementById('comments').style.display = "none";
+    else if(window.document.getElementsByClassName('comment-list')[0].style.display == "inline"){
+        window.document.getElementsByClassName('comment-list')[0].style.display = "none";
+        window.document.getElementsByClassName('toggle-show-comments')[0].textContent = "مشاهده نظرات ...";
     }    
 }
 
-function OpenLink(url)
+
+function OpenLink(url,protocol)
 {
-    location.href = 'https://'+url;
+    switch (protocol) {
+        case "page":
+            location.href = url;
+            break;
+
+        case "http":
+            location.href = 'http://'+url;
+            break;
+    
+        default:
+            location.href = 'https://'+url;
+            break;
+    }
 }
