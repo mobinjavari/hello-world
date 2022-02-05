@@ -15,13 +15,40 @@
 
 
 
+@font-face {
+    font-family: 'Vazir-Variable';
+    src: url('../font/vazir/Vazir-Variable.woff');
+}
+@font-face {
+    font-family: 'Vazir-Thin';
+    src: url('../font/vazir/Vazir-Thin.woff');
+}
+@font-face {
+    font-family: 'Vazir-Regular';
+    src: url('../font/vazir/Vazir-Regular.woff');
+}
+@font-face {
+    font-family: 'Vazir-Medium';
+    src: url('../font/vazir/Vazir-Medium.woff');
+}
+@font-face {
+    font-family: 'Vazir-Light';
+    src: url('../font/vazir/Vazir-Light.woff');
+}
+@font-face {
+    font-family: 'Vazir-Bold';
+    src: url('../font/vazir/Vazir-Bold.woff');
+}
+
+
+
 /* Body Style's */
 
 .body {
     background-color: #101010;
     color: #ffffff;
     font-size: 15px;
-    font-family: 'vazir';
+    font-family: 'Vazir-Regular';
     direction: rtl;
     text-align: right;
 } 
@@ -46,6 +73,7 @@
     -webkit-user-drag: none;
     user-zoom: none;
     cursor: not-allowed;
+    font-family: 'Vazir-Medium';
 }
 .top-bar__text, .top-bar__link {
     display: inline;
@@ -94,10 +122,12 @@
 .header-area__title {
     color: oldlace;
     font-size: 25px;
+    font-family: 'Vazir-Bold';
 }
 .header-list {
     float: left;
     margin: 1% 1px 1px 1px;
+    font-family: 'Vazir-Light';
 }
 .header-list__link {
     padding: 0 5px 0 5px;
@@ -129,6 +159,7 @@
 .article__title {
     padding: 2px 6px 2px 2px;
     font-size: 30px;
+    font-family: 'Vazir-Bold';
 }
 .article__avatar {
     width: 98% !important;
@@ -139,6 +170,8 @@
     margin: 2px 10px;
     padding: 2px 3%;
     text-align: justify;
+    font-family: 'Vazir-Regular';
+    font-size: 18px;
 }
 
 
@@ -183,7 +216,8 @@
     position: relative;
     bottom: 65px;
     font-size: 24px;
-    line-height: 3;
+    line-height: 2;
+    font-family: 'Vazir-Regular';
 }
 .details {
     display: inline;
@@ -192,6 +226,7 @@
     left: 20px;
     float: left;
     font-size: 20px;
+    font-family: 'Vazir-Regular';
 }
 .details__view, .details__like {
     color: #fff;
@@ -205,7 +240,8 @@
     bottom: 15px;
 }
 .about-body__text {
-    font-size: 15px;
+    font-size: 18px;
+    font-family: 'Vazir-Light';
 }
 
 
@@ -231,6 +267,7 @@
     font-size: 20px;
     border-bottom: 1px solid #414141;
     color: #808080;
+    font-family: 'Vazir-Medium';
 }
 .comment-form__textarea {
     background-color: #303030;
@@ -243,6 +280,7 @@
     margin: 40px 10px;
     font-size: 16px;
     box-shadow: inset rgb(0 0 0 / 20%) 9px 9px 10px 0px;
+    font-family: 'Vazir-Regular';
 }
 .comment-form__submit {
     background-color: rgba(58, 58, 58, 0.87);
@@ -343,16 +381,19 @@
 .box-item__icon {
     font-size: 60px;
     color: #fff;
+    font-family: 'Vazir-Bold';
 }
 .box-item__title {
     border-top: 1px solid rgb(105, 105, 105);
     padding: 30px 8px 20px 8px;
     font-size: 22px;
+    font-family: 'Vazir-Medium';
 }
 .box-item__body {
     margin: 10px 30px 30px 0;
     text-align: right;
     color: rgb(141, 141, 141);
+    font-family: 'Vazir-Light';
 }
 
 
@@ -387,6 +428,8 @@
     -webkit-user-drag: none;
     user-zoom: none;
     cursor: not-allowed;
+    font-family: 'Vazir-Medium';
+    direction: ltr;
 }
 
 
