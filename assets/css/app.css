@@ -48,7 +48,7 @@
     background-color: #101010;
     color: #ffffff;
     font-size: 15px;
-    font-family: 'Vazir-Regular';
+    font-family: 'Vazir-Regular' !important;
     direction: rtl;
     text-align: right;
 } 
@@ -126,7 +126,8 @@
 }
 .header-list {
     float: left;
-    margin: 1% 1px 1px 1px;
+    padding: 8px 0 0 0;
+    margin: auto;
     font-family: 'Vazir-Light';
 }
 .header-list__link {
@@ -167,9 +168,10 @@
     box-shadow: rgb(0 0 0 / 20%) 9px 9px 15px 4px;
 }
 .article__text {
-    margin: 2px 10px;
+    margin: 2px 8px;
     padding: 2px 3%;
     text-align: justify;
+    line-height: 2;
     font-family: 'Vazir-Regular';
     font-size: 18px;
 }
@@ -185,6 +187,7 @@
 }
 .about-box {
     background-color: #181818;
+    color: rgb(199, 199, 199);
     box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
     border-radius: 20px;
     width: 98%;
@@ -194,13 +197,13 @@
     display: inline;
 }
 .about-bar__img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     display: inline;
-    border-radius: 50px;
+    border-radius: 20%;
     position: relative;
-    bottom: 26px;
-    left: 10px;
+    bottom: 10px;
+    left: 5px;
     z-index: 1;
     object-fit:cover;
     user-select: none;
@@ -214,7 +217,8 @@
 .about-bar__name {
     display: inline;
     position: relative;
-    bottom: 65px;
+    bottom: 45px;
+    right: 10px;
     font-size: 24px;
     line-height: 2;
     font-family: 'Vazir-Regular';
@@ -222,8 +226,8 @@
 .details {
     display: inline;
     position: relative;
-    top: 14px;
-    left: 20px;
+    top: 20px;
+    left: 10px;
     float: left;
     font-size: 20px;
     font-family: 'Vazir-Regular';
@@ -234,10 +238,13 @@
     margin: 0 8px 0 8px;
 }
 .about-body {
+    text-align: justify;
     font-size: 16px;
-    padding: 1px 6px 1px 1px;
+    padding: 1px 6px 1px 6px;
+    line-height: 2;
     position: relative;
     bottom: 15px;
+    color: #bbbbbb;
 }
 .about-body__text {
     font-size: 18px;
@@ -279,15 +286,17 @@
     padding: 14px 10px;
     margin: 40px 10px;
     font-size: 16px;
-    box-shadow: inset rgb(0 0 0 / 20%) 9px 9px 10px 0px;
+    box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
     font-family: 'Vazir-Regular';
 }
 .comment-form__submit {
     background-color: rgba(58, 58, 58, 0.87);
     color: rgb(173, 173, 173);
-    padding: 15px 50px;
+    padding: 15px 30px;
     border-radius: 20px;
     margin: 1px 10px 10px 1px;
+    font-family: 'Vazir-Medium';
+    font-size: 14px;
     cursor: pointer;
     box-shadow: rgb(0 0 0 / 10%) 9px 9px 10px 0px;
 }
@@ -296,18 +305,19 @@
 .toggle-show-comments{
     transition: ease .7s;
     background-color: #303030;
-    color: rgb(212, 212, 212);
-    padding: 50px 14px 10px 10px;
+    color: rgb(156, 156, 156);
+    padding: 50px 8px 8px 8px;
     position: relative;
     bottom: 65px;
+    font-family: 'Vazir-Medium' !important;
     z-index: 1;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
     width: 150px;
-    height: 100px;
+    height: 90px;
     box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
 }
 .toggle-show-comments:hover {
@@ -321,22 +331,24 @@
 .comment-item {
     transition: ease .7s;
     background-color: #181818;
+    color: #808080;
     box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
     border-radius: 20px;
-    padding: 10px 16px;
-    margin: 30px auto 0 auto;
+    padding: 10px;
+    margin: 20px auto 0 auto;
     width: 90%;
+    text-align: justify;
+    line-height: 1.9;
 }
 .comment-item-body {
     display: inline;
 }
 .comment-item-body__img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: inline;
-    border-radius: 50px;
-    position: relative;
-    bottom: 26px;
+    border-radius: 100%;
+    bottom: 30px;
     left: 20px;
     z-index: 1;
     object-fit:cover;
@@ -349,10 +361,13 @@
     box-shadow: rgb(0 0 0 / 20%) 9px 9px 10px 0px;
 }
 .comment-item-body__name {
+    color: #c7c7c7;
     display: inline;
+    font-family: 'Vazir-Regular';
     position: relative;
-    bottom: 65px;
-    font-size: 24px;
+    bottom: 35px;
+    right: 14px;
+    font-size: 22px;
 }
 
 
@@ -376,7 +391,6 @@
     background: linear-gradient(to right, #213672b3, #39519ebf);
     border-radius: 20px;
     padding: 10px 14px;
-    box-shadow: rgb(0 0 0 / 30%) -12px -12px 20px 0px inset,rgb(0 0 0 / 20%) 9px 9px 10px 0px;
 }
 .box-item__icon {
     font-size: 60px;
@@ -417,10 +431,10 @@
     right: 0;
     z-index: -5;
     width: 100%;
-    height: 80px;
+    height: 200px;
     background: linear-gradient(to right, #213672, #39519e);
     text-align: center;
-    padding: 16px 10px;
+    padding: 140px 10px 16px 10px;
     margin: 0 auto 0 auto;
     user-select: none;
     -moz-user-select: none;
@@ -476,7 +490,7 @@ a {
 .ltr {
     direction: ltr;
     text-align: left;
-    float: left;
+    /* float: left; */
 }
 
 .center {
@@ -581,6 +595,10 @@ a {
     .top-bar {
         /* display: none !important; */
         height: 90px;
+        cursor: pointer;
+    }
+    .top-bar__text {
+        cursor: pointer;
     }
     .top-bar__link {
         display: none !important;
@@ -593,5 +611,11 @@ a {
 @media only screen and (max-width: 466px) {
     .header {
         margin-top: 74px;
+    }
+    .comment-form__title {
+        font-size: 16px;
+    }
+    .details {
+        display: none;
     }
 }
