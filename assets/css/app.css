@@ -441,7 +441,6 @@
     -webkit-user-select: none;
     -webkit-user-drag: none;
     user-zoom: none;
-    cursor: not-allowed;
     font-family: 'Vazir-Medium';
     direction: ltr;
 }
