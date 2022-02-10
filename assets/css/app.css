@@ -108,7 +108,7 @@
     position: sticky;
     top: 0;
     background-color: #151515;
-    padding: 26px 20px;
+    padding: 30px 20px 26px 20px;
     box-shadow: rgb(0 0 0 / 40%) 0px 15px 40px 8px;
     z-index: 10;
 }
@@ -301,6 +301,7 @@
     border-radius: 20px;
     width: 94% !important;
     height: 200px;
+    min-width: 150px;
     max-height: 500px;
     color: #fff;
     text-align: right;
