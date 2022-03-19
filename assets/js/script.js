@@ -37,5 +37,5 @@ function ScrollBar() {
     var PageScroll = document.body.scrollTop || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     var scrolled = (PageScroll / height) * 100;
-    document.getElementsByClassName("scroll-header-effect")[0].style.width = scrolled + "%";
+    document.getElementsByClassName("scroll-nav-effect")[0].style.width = scrolled + "%";
 }
