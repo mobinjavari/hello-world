@@ -24,3 +24,10 @@ Before reading this article, the word 'hello world' may have been a common word 
 -- فکر می کنید چرا از چنین کلمه ای استفاده می شود؟ 👁️‍🗨️ <br/>
 -- آیا این می تواند سرنخی برای آینده روبات ها باشد؟ 🤖 🪦 <br/>
 -- چه فکری در این باره دارید؟ 💭 <br/>
+
+
+<br><br><br><br>
+
+<img src="./assets/img/shot1111.png" title="Github-Hello-World" alt="Hello World Img">
+<img src="./assets/img/shot1112.png" title="Github-Hello-World" alt="Hello World Img">
+<img src="./assets/img/shot1113.png" title="Github-Hello-World" alt="Hello World Img">
