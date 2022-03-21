@@ -49,6 +49,23 @@ $font-vazir-Bold: "Vazir-Bold";
     -webkit-font-family: $parametrs;
 }
 
+@mixin user-select-none {
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    -o-user-drag: none;
+    -moz-user-drag: none;
+    -webkit-user-drag: none;
+
+    user-zoom: none;
+    -o-user-zoom: none;
+    -moz-user-zoom: none;
+    -webkit-user-zoom: none;
+}
+
 @font-face {
     font-family: "Vazir-Thin";
     src: url("../font/vazir/Vazir-Thin.woff");
@@ -119,20 +136,7 @@ $font-vazir-Bold: "Vazir-Bold";
     -moz-box-shadow: 0px -20px 40px -6px rgba($color: #000000, $alpha: .7) inset;
     -webkit-box-shadow: 0px -20px 40px -6px rgba($color: #000000, $alpha: .7) inset;
     
-    user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-
-    -o-user-drag: none;
-    -moz-user-drag: none;
-    -webkit-user-drag: none;
-
-    user-zoom: none;
-    -o-user-zoom: none;
-    -moz-user-zoom: none;
-    -webkit-user-zoom: none;
+    @include user-select-none();
 
     cursor: not-allowed;
     
@@ -140,11 +144,7 @@ $font-vazir-Bold: "Vazir-Bold";
     .bar__text, .bar__link {
         display: inline;
         font-size: 15px;
-        user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        -moz-user-select: none;
-        user-zoom: none;
+        @include user-select-none();
         cursor: not-allowed;
     }
 
@@ -384,12 +384,7 @@ $font-vazir-Bold: "Vazir-Bold";
                 -ms-object-fit: cover;
                 -moz-object-fit: cover;
                 -webkit-object-fit: cover;
-                user-select: none;
-                -ms-user-select: none;
-                -moz-user-select: none;
-                -webkit-user-select: none;
-                -webkit-user-drag: none;
-                user-zoom: none;
+                @include user-select-none();
                 cursor: no-drop;
                 box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px;
                 -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
@@ -592,14 +587,7 @@ $font-vazir-Bold: "Vazir-Bold";
                     -o-object-fit: cover;
                     -moz-object-fit: cover;
                     -webkit-object-fit: cover;
-                    user-select: none;
-                    -ms-user-select: none;
-                    -moz-user-select: none;
-                    -webkit-user-select: none;
-                    -webkit-user-drag: none;
-                    -moz-user-drag: none;
-                    -o-user-drag: none;
-                    user-zoom: none;
+                    @include user-select-none();
                     cursor: not-allowed;
                     box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px;
                     -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
@@ -639,6 +627,7 @@ $font-vazir-Bold: "Vazir-Bold";
         -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
         -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
         -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
+        @include user-select-none();
     
         &:hover {
             transition: .5s;
@@ -701,12 +690,7 @@ $font-vazir-Bold: "Vazir-Bold";
     margin: 0 auto 0 auto;
     border-radius: 20px;
     width: 90%;
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -webkit-user-drag: none;
-    user-zoom: none;
+    @include user-select-none();
     font-family: 'Vazir-Medium';
     direction: ltr;
     position: fixed;
