@@ -39,3 +39,9 @@ function ScrollBar() {
     var scrolled = (PageScroll / height) * 100;
     document.getElementsByClassName("scroll-nav-effect")[0].style.width = scrolled + "%";
 }
+
+function Copy_Text(input_id) {
+    var copyText = document.getElementById(input_id);
+    navigator.clipboard.writeText(copyText.textContent);
+    alert("کپی شد !");
+}
