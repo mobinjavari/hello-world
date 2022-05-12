@@ -1,0 +1,45 @@
+$font-vazir-Thin: "Vazir-Thin";
+$font-vazir-Light: "Vazir-Light";
+$font-vazir-Variable: "Vazir-Variable";
+$font-vazir-Regular: "Vazir-Regular";
+$font-vazir-Medium: "Vazir-Medium";
+$font-vazir-Bold: "Vazir-Bold";
+
+@mixin font-size($parametrs) {
+    font-size: $parametrs;
+    -o-font-size: $parametrs;
+    -moz-font-size: $parametrs;
+    -webkit-font-size: $parametrs;
+}
+
+@mixin background-linear-gradient($parametrs...) {
+    background: linear-gradient($parametrs);
+    -o-background: linear-gradient($parametrs);
+    -moz-background: linear-gradient($parametrs);
+    -webkit-background: linear-gradient($parametrs);
+}
+
+@mixin font-family($parametrs) {
+    font-family: $parametrs;
+    -o-font-family: $parametrs;
+    -moz-font-family: $parametrs;
+    -webkit-font-family: $parametrs;
+}
+
+@mixin user-select-none {
+    user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    -o-user-drag: none;
+    -moz-user-drag: none;
+    -webkit-user-drag: none;
+
+    user-zoom: none;
+    -o-user-zoom: none;
+    -moz-user-zoom: none;
+    -webkit-user-zoom: none;
+}
+
