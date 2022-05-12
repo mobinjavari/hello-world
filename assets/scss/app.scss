@@ -4,66 +4,61 @@
 
 /* About Developer : Https://MobinJavari.IR/ */
 
-$dark-theme-color: #FFFFFF;
+@import "_var.scss";
 
-$dark-theme-bg-1: #101010;
-$dark-theme-bg-2: #202020;
-$dark-theme-bg-3: #303030;
-$dark-theme-bg-4: #404040;
-$dark-theme-bg-2: #505050;
+:root {
+    color-scheme:dark;
 
-$dark-theme-box-bg-1: #181818;
-$dark-theme-box-bg-2: #202020;
-$dark-theme-box-bg-3: #222222;
-$dark-theme-box-bg-4: #333333;
+    [data-theme="dark"] {
 
-$font-size-lg: large;
-$font-size-md: medium;
-$font-size-sm: small;
+        --hesder:#151515;
+        --background:#101010;
 
-@mixin font-size($parametrs) {
-    font-size: $parametrs;
-    -o-font-size: $parametrs;
-    -moz-font-size: $parametrs;
-    -webkit-font-size: $parametrs;
+        --pre-box:#292929;
+        --pre-box-hover:#303030;
+
+        --box:#181818;
+        --box-sub:#303030db;
+
+        --input-bg:#303030db;
+        --border-color:#414141;
+
+        --color:#ffffff;
+        --color-sub:#c7c7c7;
+        --color-sub2:#808080;
+        --color-sub3:#101010;
+    }
+
+
+    [data-theme="light"] {
+        --hesder:#fff;
+        --background:#fff;
+
+        --pre-box:#ccc;
+        --pre-box-hover:#ccccccaa;
+
+        --box:#ccc;
+        --box-sub:#ddd;
+
+        --input-bg:#e2e2e2;
+        --border-color:#7c7c7c;
+    
+        --color:#101010;
+        --color-sub:#202020;
+        --color-sub2:#303030;
+        --color-sub3:#404040;
+    }
 }
 
-@mixin background-linear-gradient($parametrs...) {
-    background: linear-gradient($parametrs);
-    -o-background: linear-gradient($parametrs);
-    -moz-background: linear-gradient($parametrs);
-    -webkit-background: linear-gradient($parametrs);
-}
-
-$font-vazir-Thin: "Vazir-Thin";
-$font-vazir-Light: "Vazir-Light";
-$font-vazir-Variable: "Vazir-Variable";
-$font-vazir-Regular: "Vazir-Regular";
-$font-vazir-Medium: "Vazir-Medium";
-$font-vazir-Bold: "Vazir-Bold";
-
-@mixin font-family-vazir($parametrs) {
-    font-family: $parametrs;
-    -o-font-family: $parametrs;
-    -moz-font-family: $parametrs;
-    -webkit-font-family: $parametrs;
-}
-
-@mixin user-select-none {
-    user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-
-    -o-user-drag: none;
-    -moz-user-drag: none;
-    -webkit-user-drag: none;
-
-    user-zoom: none;
-    -o-user-zoom: none;
-    -moz-user-zoom: none;
-    -webkit-user-zoom: none;
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 @font-face {
@@ -91,26 +86,13 @@ $font-vazir-Bold: "Vazir-Bold";
     src: url("../font/vazir/Vazir-Bold.woff");
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
-
 /* Body Style's */
 
 .body {
-    color: #ffffff;
-    background-color: $dark-theme-bg-1;
-    @include font-size($font-size-md);
-    font-family: 'Vazir-Regular' !important;
+    color: var(--color);
+    background-color: var(--background);
+    @include font-size(medium);
+    @include font-family($font-vazir-Regular !important);
     direction: rtl;
     text-align: right;
 } 
@@ -128,7 +110,7 @@ $font-vazir-Bold: "Vazir-Bold";
     margin: 0px;
     padding: 18px 10px;
     @include background-linear-gradient(to right, #213672, #39519e);
-    @include font-family-vazir($font-vazir-Medium);
+    @include font-family($font-vazir-Medium);
     text-align: center;
     
     box-shadow: 0px -20px 40px -6px rgba($color: #000000, $alpha: .7) inset;
@@ -141,25 +123,26 @@ $font-vazir-Bold: "Vazir-Bold";
     cursor: not-allowed;
     
 
-    .bar__text, .bar__link {
+    &__text, &__link {
         display: inline;
         font-size: 15px;
         @include user-select-none();
         cursor: not-allowed;
+        color: #fff;
     }
 
-    .bar__link {
+    &__link {
         /*background-color: #fff;*/
         border: 1px solid #fff;
         border-radius: 10px;
-        color: #ffffff;
+        color: #ffffff !important;
         padding: 2px 10px;
         cursor: pointer;
         transition: .5s;
 
         &:hover {
             background-color: #fff;
-            color: #000;
+            color: #000 !important;
             transition: .8s;
         }
     }
@@ -174,9 +157,9 @@ $font-vazir-Bold: "Vazir-Bold";
     transition: ease .7s;
     position: sticky;
     top: 0;
-    background-color: #151515;
+    background-color: var(--hesder);
     padding: 30px 20px 26px 20px;
-    box-shadow: rgba($color: #000000, $alpha: .4) 0px 15px 40px 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 40px 8px;
     -o-box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 40px 8px;
     -moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 40px 8px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 15px 40px 8px;
@@ -197,27 +180,27 @@ $font-vazir-Bold: "Vazir-Bold";
             right: 0;
         }
 
-        .nav-area__title, .nav-list, .nav-list__link {
+        &-area__title, &-list, &-list__link {
 
             display: inline;
         }
 
-        .nav-area__title {
+        &-area__title {
 
-            color: oldlace;
+            color: var(--color);
             font-size: 25px;
-            font-family: 'Vazir-Bold';
+            @include font-family($font-vazir-Bold);
         }
 
-        .nav-list {
+        &-list {
 
             font-size: 25px;
             float: left;
             padding: 0;
             margin: auto;
-            font-family: 'Vazir-Light';
+            @include font-family($font-vazir-Light);
 
-            .nav-list__link {
+            &__link {
 
                 padding: 0 5px 0 5px;
 
@@ -231,45 +214,45 @@ $font-vazir-Bold: "Vazir-Bold";
 /* Page Style's */
 
 .site {
-    background-color: #101010;
+    background-color: var(--background);
 }
 
 .main {
     margin: 0 auto 0 auto;
     padding: 10px 0 40px 0;
     max-width: 1200px;
-    background-color: #101010;
+    background-color: var(--background);
 }
 
 
 /* Article Style's */
 
 .article {
-    background-color: #101010;
+    background-color: var(--background);
     display: block;
     margin: 30px 10px;
 
-    .article__title {
+    &__title {
         padding: 2px 6px 2px 2px;
         font-size: 30px;
-        font-family: 'Vazir-Bold';
+        @include font-family($font-vazir-Medium);
     }
 
-    .article__avatar {
+    &__avatar {
         width: 98% !important;
         margin: 40px auto 20px auto;
-        box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 15px 4px;
+        box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
         -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
         -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
         -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
     }
 
-    .article__text {
+    &__text {
         margin: 2px 8px;
         padding: 2px 3%;
         text-align: justify;
         line-height: 2;
-        font-family: 'Vazir-Regular';
+        @include font-family($font-vazir-Regular);
         font-size: 18px;
     }
 }
@@ -291,6 +274,7 @@ $font-vazir-Bold: "Vazir-Bold";
         padding: 8px 10px 3px 11px;
         border-radius: 14px;
         z-index: 0;
+        color: #fff;
 
         span {
             margin: 4px 10px;
@@ -305,11 +289,11 @@ $font-vazir-Bold: "Vazir-Bold";
         -webkit-box-sizing: border-box;
     
         direction: ltr;
-        background-color: #292929;
+        background-color: var(--pre-box);
         border-radius: 20px 0 0 0;
         padding: 10px 15px;
         text-align: left;
-        font-family: "Vazir-Light";
+        @include font-family($font-vazir-Light);
         letter-spacing: 2px;
         margin: 20px 5px 30px 5px;
         max-height: 1000px;
@@ -321,21 +305,21 @@ $font-vazir-Bold: "Vazir-Bold";
         -ms-transition: .5s;
         -webkit-transition: .5s;
     
-        box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
-        -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
-        -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
+        box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
     
         &:hover {
             transition: .5s;
             -o-transition: .5s;
             -moz-transition: .5s;
             -webkit-transition: .5s;
-            background-color: #303030;
+            background-color: var(--pre-box-hover);
         }
 
         code {
-            font-family: "Vazir-Light";
+            @include font-family($font-vazir-Light);
             letter-spacing: 2px;
             display: inline-block;
             flex-direction: column;
@@ -351,18 +335,18 @@ $font-vazir-Bold: "Vazir-Bold";
 /* About Style's */
 
 .about {
-    background-color: #101010;
+    background-color: var(--background);
     display: block;
     padding: 10px 10px;
 
-    .about-box {
-        background-color: #181818;
-        color: rgb(199, 199, 199);
+    &-box {
+        background-color: var(--box);
+        color: var(--color-sub);
         position: relative;
-        box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px;
-        -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
-        -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
+        box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
         border-radius: 20px;
         width: 98%;
         margin: 40px auto 20px auto;
@@ -370,7 +354,7 @@ $font-vazir-Bold: "Vazir-Bold";
         .about-bar {
             display: inline;
             
-            .about-bar__img {
+            &__img {
                 width: 90px;
                 height: 90px;
                 display: inline;
@@ -386,20 +370,20 @@ $font-vazir-Bold: "Vazir-Bold";
                 -webkit-object-fit: cover;
                 @include user-select-none();
                 cursor: no-drop;
-                box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px;
+                box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
                 -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
                 -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
                 -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
             }
         
-            .about-bar__name {
+            &__name {
                 display: inline;
                 position: relative;
                 bottom: 45px;
                 right: 10px;
                 font-size: 24px;
                 line-height: 2;
-                font-family: 'Vazir-Regular';
+                @include font-family($font-vazir-Regular);
             }
 
             .details {
@@ -409,13 +393,13 @@ $font-vazir-Bold: "Vazir-Bold";
                 left: 10px;
                 float: left;
                 font-size: 20px;
-                font-family: 'Vazir-Regular';
-            }
-
-            .details__view, .details__like {
-                color: #fff;
-                font-size: 15px;
-                margin: 0 8px 0 8px;
+                @include font-family($font-vazir-Regular);
+            
+                &__view, &__like {
+                    color: var(--color);
+                    font-size: 15px;
+                    margin: 0 8px 0 8px;
+                }
             }
         }
 
@@ -426,11 +410,11 @@ $font-vazir-Bold: "Vazir-Bold";
             line-height: 2;
             position: relative;
             bottom: 15px;
-            color: #bbbbbb;
+            color: var(--color-sub);
 
-            .about-body__text {
+            &__text {
                 font-size: 18px;
-                font-family: 'Vazir-Light';
+                @include font-family($font-vazir-Light);
             }
         }
     }
@@ -442,94 +426,98 @@ $font-vazir-Bold: "Vazir-Bold";
 /* Comments Style's */
 
 .comment {
-    background-color: #101010;
+    background-color: var(--background);
     display: block;
     padding: 10px 10px 40px 10px;
 
-    .comment-box {
-        background-color: #181818;
-        box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px;
-        -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
-        -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
+    &-box {
+        background-color: var(--box);
+        box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
         border-radius: 20px;
         width: 98%;
         margin: 40px auto 20px auto;
         z-index: 2;
         position: relative;
 
-        .comment-form__title {
-            padding: 25px 20px;
-            text-align: center;
-            font-size: 20px;
-            border-bottom: 1px solid #414141;
-            color: #808080;
-            font-family: 'Vazir-Medium';
-        }
-
-        .comment-form__input-name {
-            background-color: #303030db;
-            border-radius: 20px;
-            width: 94%;
-            color: #fff;
-            text-align: right;
-            padding: 14px 10px;
-            margin: 20px 10px;
-            font-size: 16px;
-            box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-            -o-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-            -moz-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-            -webkit-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-            font-family: 'Vazir-Regular';
-        }
-
-        .comment-form__textarea {
-            background-color: #303030db;
-            border-radius: 20px;
-            width: 94% !important;
-            height: 200px;
-            min-height: 150px !important;
-            max-height: 500px;
-            color: #fff;
-            text-align: right;
-            padding: 14px 10px;
-            margin: 0px 10px;
-            font-size: 16px;
-            box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-            -o-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-            -moz-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-            -webkit-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-            font-family: 'Vazir-Regular';
-        }
-
-        .comment-form__submit {
-            background-color: #303030db;
-            color: rgb(173, 173, 173);
-            padding: 15px 30px !important;
-            border-radius: 20px;
-            margin: 10px 3% 3% 1px;
-            box-sizing: border-box;
-            -o-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            font-family: 'Vazir-Medium';
-            font-size: 15px;
-            cursor: pointer;
-            box-shadow: rgba($color: #000000, $alpha: .1) 9px 9px 10px 0px;
-            -o-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
-            -moz-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
-            -webkit-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
+        .comment-form {
+            &__title {
+                padding: 25px 20px;
+                margin: auto 10px;
+                text-align: center;
+                font-size: 20px;
+                border-bottom: 1px solid var(--border-color);
+                color: var(--color);
+                @include font-family($font-vazir-Medium);
+            }
+    
+            &__input-name {
+                background-color: var(--input-bg);
+                border-radius: 20px;
+                width: 94%;
+                color: var(--color);
+                text-align: right;
+                padding: 14px 10px;
+                margin: 20px 10px;
+                font-size: 16px;
+                box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
+                -o-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
+                -moz-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
+                -webkit-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
+                @include font-family($font-vazir-Regular);
+            }
+    
+            &__textarea {
+                background-color: var(--input-bg);
+                border-radius: 20px;
+                width: 94% !important;
+                height: 200px;
+                min-height: 150px !important;
+                max-height: 500px;
+                color: var(--color);
+                text-align: right;
+                padding: 14px 10px;
+                margin: 0px 10px;
+                font-size: 16px;
+                box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
+                -o-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
+                -moz-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
+                -webkit-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
+                @include font-family($font-vazir-Regular);
+            }
+    
+            &__submit {
+                background-color: var(--box-sub);
+                color: var(--color-sub);
+                padding: 15px 30px !important;
+                border-radius: 20px;
+                margin: 10px 3% 3% 1px;
+                box-sizing: border-box;
+                -o-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                @include font-family($font-vazir-Medium);
+                font-size: 15px;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
+                -o-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
+                -moz-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
+                -webkit-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
+            }
         }
     }
 
     .toggle-show-comments{
         transition: ease .7s;
-        background-color: #303030db;
-        color: rgb(156, 156, 156);
+        background-color: var(--box-sub);
+        color: var(--color-sub);
         padding: 50px 8px 8px 8px;
         position: relative;
+        opacity: .8;
         bottom: 65px;
-        font-family: 'Vazir-Medium' !important;
+        @include font-family($font-vazir-Medium !important);
         z-index: 1;
         border-radius: 20px;
         cursor: pointer;
@@ -538,10 +526,10 @@ $font-vazir-Bold: "Vazir-Bold";
         text-align: center;
         width: 150px;
         height: 90px;
-        box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px;
-        -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
-        -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
+        box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
     
         &::after {
             content: ' :.';
@@ -550,21 +538,21 @@ $font-vazir-Bold: "Vazir-Bold";
             content: '.: ';
         }
         &:hover {
-            background-color: #3a3a3abe;
+            opacity: 1;
         }
     }
 
-    .comment-list {
+    &-list {
         transition: ease 1s;
 
         .comment-item {
             transition: ease .7s;
-            background-color: #181818;
-            color: #808080;
-            box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px;
-            -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
-            -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
-            -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
+            background-color: var(--box);
+            color: var(--color-sub2);
+            box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+            -o-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+            -moz-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
             border-radius: 20px;
             padding: 10px;
             margin: 20px auto 0 auto;
@@ -572,10 +560,10 @@ $font-vazir-Bold: "Vazir-Bold";
             text-align: justify;
             line-height: 1.9;
 
-            .comment-item-body {
+            &-body {
                 display: inline;
 
-                .comment-item-body__img {
+                &__img {
                     width: 80px;
                     height: 80px;
                     display: inline;
@@ -593,12 +581,13 @@ $font-vazir-Bold: "Vazir-Bold";
                     -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
                     -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
                     -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
+                    border: 4px solid var(--border-color);
                 }
         
-                .comment-item-body__name {
-                    color: #c7c7c7;
+                &__name {
+                    color: var(--color-sub);
                     display: inline;
-                    font-family: 'Vazir-Regular';
+                    @include font-family($font-vazir-Regular);
                     position: relative;
                     bottom: 35px;
                     right: 14px;
@@ -613,20 +602,21 @@ $font-vazir-Bold: "Vazir-Bold";
 /* BoxList Style's */
 
 .box-list {
-    background-color: #101010;
+    background-color: var(--background);
     padding: 40px 10px;
 
     .box-item {
         top: 0;
         transition: .5s;
-        background-color: #181818;
+        background-color: var(--box);
+        color: var(--color);
         border-radius: 20px;
         padding: 10px 14px !important;
         height:350px ;
-        box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 15px 4px;
-        -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
-        -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
-        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 15px 4px;
+        box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
         @include user-select-none();
     
         &:hover {
@@ -634,29 +624,28 @@ $font-vazir-Bold: "Vazir-Bold";
             -o-transition: .5s;
             -moz-transition: .5s;
             -webkit-transition: .5s;
-            background: linear-gradient(to right, #213672b3, #39519ebf);
+            background: linear-gradient(to right, #213672, #39519e);
             border-radius: 20px;
             padding: 10px 14px;
+            color: #fff !important;
         }
 
         .box-item__icon {
             font-size: 60px;
-            color: #fff;
-            font-family: 'Vazir-Bold';
+            @include font-family($font-vazir-Bold);
         }
 
         .box-item__title {
-            border-top: 1px solid rgb(105, 105, 105);
+            border-top: 1px solid #e8e8e88f;
             padding: 30px 8px 20px 8px;
             font-size: 22px;
-            font-family: 'Vazir-Medium';
+            @include font-family($font-vazir-Medium);
         }
 
         .box-item__body {
             margin: 10px 30px 30px 0;
             text-align: right;
-            color: rgb(141, 141, 141);
-            font-family: 'Vazir-Light';
+            @include font-family($font-vazir-Light);
         }
     }
 }
@@ -668,8 +657,8 @@ $font-vazir-Bold: "Vazir-Bold";
     margin: 0 10px 80px 10px;
     padding: 40px 14px 40px 14px;
     border-radius: 20px;
-    background-color: #151515;
-    box-shadow: rgba($color: #000000, $alpha: .5) 0px 18px 40px 10px;
+    background-color: var(--box);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 18px 40px 10px;
     -o-box-shadow: rgba(0, 0, 0, 0.5) 0px 18px 40px 10px;
     -moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 18px 40px 10px;
     -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 18px 40px 10px;
@@ -681,6 +670,7 @@ $font-vazir-Bold: "Vazir-Bold";
 .CopyRight {
     bottom: 5px;
     right: 5%;
+    color: #fff;
     z-index: -5;
     height: 200px;
     background: -webkit-gradient(linear, left top, right top, from(#213672), to(#39519e));
@@ -691,9 +681,13 @@ $font-vazir-Bold: "Vazir-Bold";
     border-radius: 20px;
     width: 90%;
     @include user-select-none();
-    font-family: 'Vazir-Medium';
+    @include font-family($font-vazir-Medium);
     direction: ltr;
     position: fixed;
+
+    a {
+        color:#fff;
+    }
 }
 
 
@@ -714,7 +708,7 @@ p {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color);
 }
 
 
@@ -807,159 +801,80 @@ a {
 
 /* Responsive Box */
 
-.container {
+.itm-12 {
     margin: auto;
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(1200px, 1fr));
     text-align: center;
-    width: 98%;
+    width: 100%;
     max-width: 1200px;
-}
+    justify-content: center;
 
-
-.col-2, .col-3, .col-4, .col-6, .rwd {
-    margin: 10px 4px !important;
-}
-
-@media only screen and (min-width:1100px) {
-    .col-3 {
-        flex: 0 0 auto;
-        -o-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        -moz-flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -webkit-box-flex: 0;
-        width: 24% !important;
-        display: inline-flex !important;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        align-content: center;    }
-}
-
-@media only screen and (min-width:880px) {
-    .col-4 {
-        flex: 0 0 auto;
-        -o-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        -moz-flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -webkit-box-flex: 0;
-        width: 32% !important;
-        display: inline-flex !important;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        align-content: center;    }
-}
-
-@media only screen and (min-width:600px) {
-    .col-6 {
-        flex: 0 0 auto;
-        -o-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        -moz-flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -webkit-box-flex: 0;
-        width: 48% !important;
-        display: inline-flex !important;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        align-content: center;    }
-}
-
-@media only screen and (min-width:200px) {
-    .col-12 {
-        flex: 0 0 auto;
-        -o-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        -moz-flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -webkit-box-flex: 0;
-        width: 98% !important;
-        display: inline-flex !important;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        align-content: center;    }
-}
-
-@media only screen {
-    .rwd {
-        /* 4 */
-        flex: 0 0 auto;
-        -o-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        -moz-flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -webkit-box-flex: 0;
-        width: 24%;
-        display: inline-block;
+    .itm {
+        margin: 10px !important;
+        grid-gap: 1rem;
     }
 }
 
-@media only screen and (max-width:1100px) {
-    .rwd {
-        /* 3 */
-        flex: 0 0 auto;
-        -o-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        -moz-flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -webkit-box-flex: 0;
-        width: 32%;
-        display: inline-block;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        align-content: center;
+.itm-2 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    
+    .itm {
+        margin: 10px 80px !important;
+        grid-gap: 1rem;
     }
 }
 
-@media only screen and (max-width:880px) {
-    .rwd {
-        /* 2 */
-        flex: 0 0 auto;
-        -o-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        -moz-flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -webkit-box-flex: 0;
-        width: 48%;
-        display: inline-block;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        align-content: center;
+.itm-3 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+
+    .itm {
+        margin: 10px !important;
+        grid-gap: 1rem;
     }
 }
 
-@media only screen and (max-width:600px) {
-    .rwd {
-        /* 1 */
-        flex: 0 0 auto;
-        -o-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
-        -moz-flex: 0 0 auto;
-        -webkit-flex: 0 0 auto;
-        -webkit-box-flex: 0;
-        width: 98%;
-        display: inline-block;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        flex-direction: column;
-        align-content: center;
+.itm-4 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+
+    .itm {
+        margin: 10px !important;
+        grid-gap: 1rem;
     }
 }
 
+.itm-5 {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
 
+    .itm {
+        margin: 10px !important;
+        grid-gap: 1rem;
+    }
+}
 
 @media only screen and (max-width:540px) {
     .top-bar {
@@ -1012,12 +927,12 @@ a {
 
 /* Scroll Bar */
 
-::-webkit-scrollbar { width: 10px; height: 10px;}
-::-webkit-scrollbar-button {  background-color: #292929;}
-::-webkit-scrollbar-track {  background-color: #40404085;}
-::-webkit-scrollbar-track-piece { background-color: #101010;}
-::-webkit-scrollbar-thumb { height: 50px; background-color: #292929;}
-::-webkit-scrollbar-corner { background-color: #292929;}
+// ::-webkit-scrollbar { width: 10px; height: 10px;}
+// ::-webkit-scrollbar-button {  background-color: #292929;}
+// ::-webkit-scrollbar-track {  background-color: #40404085;}
+// ::-webkit-scrollbar-track-piece { background-color: #101010;}
+// ::-webkit-scrollbar-thumb { height: 50px; background-color: #292929;}
+// ::-webkit-scrollbar-corner { background-color: #292929;}
 ::-webkit-resizer { background-color: #202020; border-radius: 10px 10px 10px 0px; border: 1px solid rgba(204, 204, 204, 0.192); }
 
 
@@ -1030,7 +945,6 @@ a {
         opacity: 1;
         transition: all 0.1s ease 0.5s;
         visibility: visible;
-        cursor: none;
     }
 
     
@@ -1041,11 +955,10 @@ a {
         padding: 4px 8px;
         color: #ccc;
         font-size: 15px;
-        font-family: "Vazir-Thin";
+        @include font-family($font-vazir-Thin);
         margin: 5px 10px;
         bottom: 8px;
         left: 4px;
-        cursor: none;
 
         white-space: nowrap;
         -o-white-space: nowrap;

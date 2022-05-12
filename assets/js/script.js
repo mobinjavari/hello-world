@@ -13,6 +13,28 @@ function ToggleShowComments()
     }    
 }
 
+// if(document.cookie("theme"))
+// {
+//     if(document.cookie("theme").textContent() == "dark")
+//     {   
+//         document.getElementById("body").setAttribute("data-theme", "dark"); 
+//     }else if(document.cookie("theme").textContent() == "light")
+//     {
+//         document.getElementById("body").setAttribute("data-theme", "light"); 
+//     }
+// }
+
+function ToggleDarkTheme()
+{
+    if(document.getElementById("body").getAttribute("data-theme") == "dark")
+    {
+        document.getElementById("body").setAttribute("data-theme", "light"); 
+        setCookie("theme", "light", 30);
+    }else if(document.getElementById("body").getAttribute("data-theme") == "light"){
+        document.getElementById("body").setAttribute("data-theme", "dark"); 
+        setCookie("theme", "dark", 30);
+    }
+}
 
 function OpenLink(url,protocol)
 {

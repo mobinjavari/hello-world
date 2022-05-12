@@ -29,11 +29,11 @@
 
     <title>Hello World</title>
 </head>
-<body class="body" style="zoom:90%;">
+<body class="body" id="body" data-theme="light" color-scheme="dark">
 
     <section class="bar" onclick="OpenLink('t.me/DarkLearnTeam');">
         <p class="bar__text" data-title="دارک لرن"> با عضویت در کانال تلگرامی دارک لرن از اخبار تکنولوژی روز دنیا باخبر شوید. </p>
-        <a class="bar__link" href="https://t.me/DarkLearnTeam/" data-title=" کلیک کنید"> عضویت </a>
+        <a class="bar__link" href="https://t.me/DarkLearnTeam/" id="theme" data-title=" کلیک کنید"> عضویت </a>
     </section>
     
     <header class="header">
@@ -42,14 +42,20 @@
                 <div class="scroll-nav-effect"></div>
                 <h1 class="nav-area__title" data-title="سلام دنیا"> <a href="https://github.com/mobinjavari/hello-world"><i class="fas fa-globe-europe"></i></a> Hello World</h1>
                 <ul class="nav-list">
-                    <li class="nav-list__link" data-title="گیت هاب"><a href="https://Github.COM/MobinJavari"> <i class="fab fa-github"></i> </a></li>
-                    <li class="nav-list__link" data-title="تلگرام"><a href="https://Telegram.ORG/MobinJavari"> <i class="fab fa-telegram"></i> </a></li>
+                    <!-- <li class="nav-list__link" data-title="گیت هاب"><a href="https://Github.COM/MobinJavari"> <i class="fab fa-github"></i> </a></li>
+                    <li class="nav-list__link" data-title="تلگرام"><a href="https://Telegram.ORG/MobinJavari"> <i class="fab fa-telegram"></i> </a></li> -->
+                    <li class="nav-list__link cursor-pointer" data-title="رنگ تم" onclick="ToggleDarkTheme()"> <i class="fa-solid fa-circle-half-stroke"></i> </li>
                 </ul>
             </section>
         </nav>
     </header>
     
-    <section class="site">
+    <section class="site" onclick="dark_theme()">
+        <script>
+            
+            loadFile("path/to/uj5tyfughij.css", "css");
+
+            </script>
         <section class="main">
 
             <article class="article">
@@ -154,11 +160,11 @@
             <section class="comment">
 
                 <div class="comment-box">
-                    <form action="#" method="post" class="comment-form">
+                    <form action="" method="get" class="comment-form">
                         <h3 class="comment-form__title"> ایده های خود را با ما به اشتراک بگزارید </h3>
                         <div class="center">
                             <input class="comment-form__input-name" type="text" name="name" id="name" placeholder="نام خود را وارد کنید ...">
-                            <textarea class="comment-form__textarea" name="comment" id="comment" placeholder="نظر خود را با ما به اشترک بگذارید">  </textarea>
+                            <textarea class="comment-form__textarea" name="comment" id="comment" placeholder="نظر خود را با ما به اشترک بگذارید"></textarea>
                         </div>
                         <button class="comment-form__submit" type="submit" data-title="ارسال نظر"> ارسال <i class="fas fa-paper-plane"></i> </button>                        
                     </form>
@@ -204,23 +210,23 @@
     
             <section class="box-list">
                 <h2 class="center font-size-30">.: تکنولوژی های استفاده شده :.<br><br></h2>
-                <div class="container">
-                    <div class="rwd col-3 cursor-pointer" data-title="HTML5">
+                <div class="itm-4">
+                    <div class="itm cursor-pointer" data-title="HTML5">
                         <div class="box-item height-auto">
                             <strong class="box-item__icon font-size-100"><i class="fab fa-html5"></i></strong>
                         </div>
                     </div>
-                    <div class="rwd col-3 cursor-pointer" data-title="CSS 3">
+                    <div class="itm cursor-pointer" data-title="CSS 3">
                         <div class="box-item height-auto">
                             <strong class="box-item__icon font-size-100"><i class="fab fa-css3"></i></strong>
                         </div>
                     </div>
-                    <div class="rwd col-3 cursor-pointer" data-title="SASS">
+                    <div class="itm cursor-pointer" data-title="SASS">
                         <div class="box-item height-auto">
                             <strong class="box-item__icon font-size-100"><i class="fab fa-sass"></i></strong>
                         </div>
                     </div>
-                    <div class="rwd col-3 cursor-pointer" data-title="Javascript">
+                    <div class="itm cursor-pointer" data-title="Javascript">
                         <div class="box-item height-auto">
                             <strong class="box-item__icon font-size-100"><i class="fab fa-js"></i></strong>
                         </div>
@@ -230,8 +236,8 @@
 
             <section class="box-list">
                 <h2 class="center font-size-30">.: مجموعه های در حال توسعه :.<br><br></h2>
-                <div class="container">
-                    <div class="rwd col-4 cursor-pointer" onclick="OpenLink('DarkLearn.net')" data-title="مجموعه دارک لرن">
+                <div class="itm-3">
+                    <div class="itm cursor-pointer" onclick="OpenLink('DarkLearn.net')" data-title="مجموعه دارک لرن">
                         <div class="box-item">
                             <strong class="box-item__icon"> <i class="fas fa-code"></i> </strong>
                             <p class="box-item__title"> مجموعه دارک لرن </p>
@@ -244,7 +250,7 @@
                         </div>
                     </div>
 
-                    <div class="rwd col-4 cursor-pointer" onclick="OpenLink('DarkFollow.IR')" data-title="مجموعه دارک فالو">
+                    <div class="itm cursor-pointer" onclick="OpenLink('DarkFollow.IR')" data-title="مجموعه دارک فالو">
                         <div class="box-item">
                             <strong class="box-item__icon"> <i class="fas fa-user-plus"></i> </strong>
                             <p class="box-item__title"> مجموعه دارک فالو </p>
@@ -257,7 +263,7 @@
                         </div>
                     </div>
 
-                    <div class="rwd col-4 cursor-pointer" onclick="OpenLink('t.me/MeloDark')" data-title="مجموعه ملو دارک">
+                    <div class="itm cursor-pointer" onclick="OpenLink('t.me/MeloDark')" data-title="مجموعه ملو دارک">
                         <div class="box-item">
                             <strong class="box-item__icon"> <i class="fas fa-music"></i> </strong>
                             <p class="box-item__title"> مجموعه ملو دارک </p>
@@ -276,14 +282,14 @@
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="col-6">
+        <div class="itm-2">
+            <div class="itm">
                 <div class="rtl">
                     <h2 data-title="سلام دنیا"><i class="fab fa-ello"></i> سلام دنیا </h2>
                     <p> کلمه 'سلام دنیا' یکی از مخوف ترین کلمات در حوضه برنامه نویسی, کلمه ای که هزاران تعریف میتواند داشته باشد, و یا معنی آینده ما را در خود گنجانده باشد. </p>
                 </div>
             </div>
-            <div class="col-6">
+            <div class="itm">
                 <div class="ltr">
                     <h2 data-title="hello world"><i class="fab fa-ello"></i> Hello World </h2>
                     <p> The word 'hello world' is one of the scariest words in the field of programming, a word that can have thousands of definitions, or include the meaning of our future. </p>
