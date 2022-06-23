@@ -1,4 +1,3 @@
-
 :root {
     color-scheme:dark;
 
@@ -7,8 +6,8 @@
         --hesder:#151515;
         --background:#101010;
 
-        --pre-box:#292929;
-        --pre-box-hover:#303030;
+        --pre-box:#0000004a;
+        --pre-box-hover:#0000002b;
 
         --box:#181818;
         --box-sub:#303030db;
@@ -142,8 +141,7 @@
         &-area__title {
 
             color: var(--color);
-            font-size: 25px;
-            @include font($font-vazir-Bold);
+            @include font($font-vazir-Medium,25px);
         }
 
         &-list {
@@ -204,11 +202,11 @@
         padding: 2px 3%;
         text-align: justify;
         line-height: 2;
-        @include font($font-vazir-Regular);
+        @include font($font-vazir-Light);
         font-size: 18px;
 
         h1 ,h2 ,h3 ,h4 ,h5 ,h6{
-            @include font($font-vazir-Bold);
+            @include font($font-vazir-Medium !important);
         }
     }
 }
@@ -228,10 +226,10 @@
         top: 10px;
         right: 28px;
         cursor: pointer;
-        background: #00000052;
+        background: #424242;
         padding: 8px 10px 3px 11px;
         border-radius: 14px;
-        z-index: 0;
+        z-index: 10;
         color: #fff;
 
 
@@ -243,17 +241,19 @@
     .pre {
 
         @include box-sizing(border-box);
-    
+        border: 1px solid #ffffff12;
         direction: ltr;
         background-color: var(--pre-box);
+        @include backdrop-filter(blur(30px));
+        color: #00AA00;
         border-radius: 20px 0 0 0;
         padding: 10px 15px;
         text-align: left;
-        @include font($font-vazir-Light);
         letter-spacing: 2px;
         margin: 20px 5px 30px 5px;
         max-height: 1000px;
         overflow: scroll !important;
+        z-index: 1;
         
         @include transition(.5s);
         
@@ -266,8 +266,7 @@
         }
 
         code {
-
-            @include font($font-vazir-Light);
+            @include font("chalkboard",null,400);
             letter-spacing: 2px;
             display: inline-block;
             flex-direction: column;
@@ -402,10 +401,9 @@
                 padding: 25px 20px;
                 margin: auto 10px;
                 text-align: center;
-                font-size: 20px;
                 border-bottom: 1px solid var(--border-color);
                 color: var(--color);
-                @include font($font-vazir-Medium);
+                @include font($font-vazir-Medium,large,300);
 
             }
     
@@ -564,21 +562,19 @@
         }
 
         .box-item__icon {
-            font-size: 60px;
-            @include font($font-vazir-Bold);
+            @include font($font-vazir-Bold,60px);
         }
 
         .box-item__title {
             border-top: 1px solid #e8e8e88f;
             padding: 30px 8px 20px 8px;
-            font-size: 22px;
-            @include font($font-vazir-Medium);
+            @include font($font-vazir-Bold,22px);
         }
 
         .box-item__body {
             margin: 10px 30px 30px 0;
             text-align: right;
-            @include font($font-vazir-Light);
+            @include font($font-vazir-Regular);
         }
     }
 }

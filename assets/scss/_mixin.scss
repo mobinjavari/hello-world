@@ -15,7 +15,7 @@ $font-vazir-Bold: "Vazir-Bold";
 
 // -ms-            For Microsoft Edge, Internet Explorer
 
-@mixin font($famliy:$font-vazir-medium,$size:auto,$weight:auto) {
+@mixin font($famliy:$font-vazir-medium,$size:null,$weight:null) {
     font-family: $famliy;
     -o-font-family: $famliy;
     -ms-font-family: $famliy;
