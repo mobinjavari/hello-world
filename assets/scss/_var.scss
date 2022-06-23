@@ -93,3 +93,11 @@ $font-vazir-Bold: "Vazir-Bold";
     -moz-backdrop-filter: $parametrs;
     -webkit-backdrop-filter: $parametrs;
 }
+
+@mixin object-fit($parametrs) {
+    object-fit: $parametrs;
+    -o-object-fit: $parametrs;
+    -ms-object-fit: $parametrs;
+    -moz-object-fit: $parametrs;
+    -webkit-object-fit: $parametrs;
+}
