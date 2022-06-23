@@ -55,10 +55,7 @@
     padding: 0;
     border: 0;
     outline: 0;
-    box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    @include box-sizing(border-box);
 }
 
 @font-face {
@@ -91,8 +88,7 @@
 .body {
     color: var(--color);
     background-color: var(--background);
-    @include font-size(medium);
-    @include font-family($font-vazir-Regular !important);
+    @include font($font-vazir-Regular !important);
     direction: rtl;
     text-align: right;
 } 
@@ -104,29 +100,25 @@
     top: 0;
     right: 0;
     position: fixed;
-    
     width: 100%;
     height: 70px;
     margin: 0px;
     padding: 18px 10px;
-    @include background-linear-gradient(to right, #213672, #39519e);
-    @include font-family($font-vazir-Medium);
+    @include background(background-linear-gradient(to right, #213672, #39519e));
+    @include font($font-vazir-Medium);
     text-align: center;
-    
     box-shadow: 0px -20px 40px -6px rgba($color: #000000, $alpha: .7) inset;
     -o-box-shadow: 0px -20px 40px -6px rgba($color: #000000, $alpha: .7) inset;
     -moz-box-shadow: 0px -20px 40px -6px rgba($color: #000000, $alpha: .7) inset;
     -webkit-box-shadow: 0px -20px 40px -6px rgba($color: #000000, $alpha: .7) inset;
-    
-    @include user-select-none();
-
+    @include user-select(none);
     cursor: not-allowed;
     
 
     &__text, &__link {
         display: inline;
         font-size: 15px;
-        @include user-select-none();
+        @include user-select(none);
         cursor: not-allowed;
         color: #fff;
     }
@@ -189,7 +181,7 @@
 
             color: var(--color);
             font-size: 25px;
-            @include font-family($font-vazir-Bold);
+            @include font($font-vazir-Bold);
         }
 
         &-list {
@@ -198,7 +190,7 @@
             float: left;
             padding: 0;
             margin: auto;
-            @include font-family($font-vazir-Light);
+            @include font($font-vazir-Light);
 
             &__link {
 
@@ -228,14 +220,16 @@
 /* Article Style's */
 
 .article {
+
     background-color: var(--background);
     display: block;
     margin: 30px 10px;
 
+
     &__title {
         padding: 2px 6px 2px 2px;
         font-size: 30px;
-        @include font-family($font-vazir-Medium);
+        @include font($font-vazir-Medium);
     }
 
     &__avatar {
@@ -252,7 +246,7 @@
         padding: 2px 3%;
         text-align: justify;
         line-height: 2;
-        @include font-family($font-vazir-Regular);
+        @include font($font-vazir-Regular);
         font-size: 18px;
     }
 }
@@ -261,9 +255,11 @@
 /* Pre Style's */
 
 .editor {
+
     text-align: center;
     display: block;
     position: relative;
+
 
     .copy-pre {
         position: absolute;
@@ -276,12 +272,14 @@
         z-index: 0;
         color: #fff;
 
+
         span {
             margin: 4px 10px;
         }
     }
 
     .pre {
+
         box-sizing: border-box;
         -o-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -293,7 +291,7 @@
         border-radius: 20px 0 0 0;
         padding: 10px 15px;
         text-align: left;
-        @include font-family($font-vazir-Light);
+        @include font($font-vazir-Light);
         letter-spacing: 2px;
         margin: 20px 5px 30px 5px;
         max-height: 1000px;
@@ -310,6 +308,7 @@
         -moz-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
         -webkit-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
     
+
         &:hover {
             transition: .5s;
             -o-transition: .5s;
@@ -319,7 +318,8 @@
         }
 
         code {
-            @include font-family($font-vazir-Light);
+
+            @include font($font-vazir-Light);
             letter-spacing: 2px;
             display: inline-block;
             flex-direction: column;
@@ -327,6 +327,7 @@
             align-content: center;
             justify-content: center;
             align-items: stretch;
+
         }
     }
 }
@@ -335,11 +336,14 @@
 /* About Style's */
 
 .about {
+
     background-color: var(--background);
     display: block;
     padding: 10px 10px;
 
+
     &-box {
+
         background-color: var(--box);
         color: var(--color-sub);
         position: relative;
@@ -351,10 +355,12 @@
         width: 98%;
         margin: 40px auto 20px auto;
 
+
         .about-bar {
             display: inline;
             
             &__img {
+
                 width: 90px;
                 height: 90px;
                 display: inline;
@@ -368,42 +374,50 @@
                 -ms-object-fit: cover;
                 -moz-object-fit: cover;
                 -webkit-object-fit: cover;
-                @include user-select-none();
+                @include user-select(none);
                 cursor: no-drop;
                 box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
                 -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
                 -moz-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
                 -webkit-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
+
             }
         
             &__name {
+
                 display: inline;
                 position: relative;
                 bottom: 45px;
                 right: 10px;
                 font-size: 24px;
                 line-height: 2;
-                @include font-family($font-vazir-Regular);
+                @include font($font-vazir-Regular);
+
             }
 
             .details {
+
                 display: inline;
                 position: absolute;
                 top: 25px;
                 left: 10px;
                 float: left;
                 font-size: 20px;
-                @include font-family($font-vazir-Regular);
+                @include font($font-vazir-Regular);
             
+
                 &__view, &__like {
+
                     color: var(--color);
                     font-size: 15px;
                     margin: 0 8px 0 8px;
+
                 }
             }
         }
 
         .about-body {
+
             text-align: justify;
             font-size: 16px;
             padding: 1px 6px 1px 6px;
@@ -412,9 +426,10 @@
             bottom: 15px;
             color: var(--color-sub);
 
+
             &__text {
                 font-size: 18px;
-                @include font-family($font-vazir-Light);
+                @include font($font-vazir-Light);
             }
         }
     }
@@ -426,9 +441,11 @@
 /* Comments Style's */
 
 .comment {
+
     background-color: var(--background);
     display: block;
     padding: 10px 10px 40px 10px;
+
 
     &-box {
         background-color: var(--box);
@@ -442,18 +459,23 @@
         z-index: 2;
         position: relative;
 
+
         .comment-form {
+
             &__title {
+
                 padding: 25px 20px;
                 margin: auto 10px;
                 text-align: center;
                 font-size: 20px;
                 border-bottom: 1px solid var(--border-color);
                 color: var(--color);
-                @include font-family($font-vazir-Medium);
+                @include font($font-vazir-Medium);
+
             }
     
             &__input-name {
+
                 background-color: var(--input-bg);
                 border-radius: 20px;
                 width: 94%;
@@ -466,10 +488,12 @@
                 -o-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
                 -moz-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
                 -webkit-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-                @include font-family($font-vazir-Regular);
+                @include font($font-vazir-Regular);
+
             }
     
             &__textarea {
+
                 background-color: var(--input-bg);
                 border-radius: 20px;
                 width: 94% !important;
@@ -485,10 +509,12 @@
                 -o-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
                 -moz-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
                 -webkit-box-shadow: inset rgba(0, 0, 0, 0.26) 10px 10px 10px 0px;
-                @include font-family($font-vazir-Regular);
+                @include font($font-vazir-Regular);
+
             }
     
             &__submit {
+
                 background-color: var(--box-sub);
                 color: var(--color-sub);
                 padding: 15px 30px !important;
@@ -498,13 +524,14 @@
                 -o-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 -webkit-box-sizing: border-box;
-                @include font-family($font-vazir-Medium);
+                @include font($font-vazir-Medium);
                 font-size: 15px;
                 cursor: pointer;
                 box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
                 -o-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
                 -moz-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
                 -webkit-box-shadow: rgba(0, 0, 0, 0.1) 9px 9px 10px 0px;
+
             }
         }
     }
@@ -517,7 +544,7 @@
         position: relative;
         opacity: .8;
         bottom: 65px;
-        @include font-family($font-vazir-Medium !important);
+        @include font($font-vazir-Medium !important);
         z-index: 1;
         border-radius: 20px;
         cursor: pointer;
@@ -575,7 +602,7 @@
                     -o-object-fit: cover;
                     -moz-object-fit: cover;
                     -webkit-object-fit: cover;
-                    @include user-select-none();
+                    @include user-select(none);
                     cursor: not-allowed;
                     box-shadow: rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px;
                     -o-box-shadow: rgba(0, 0, 0, 0.2) 9px 9px 10px 0px;
@@ -587,7 +614,7 @@
                 &__name {
                     color: var(--color-sub);
                     display: inline;
-                    @include font-family($font-vazir-Regular);
+                    @include font($font-vazir-Regular);
                     position: relative;
                     bottom: 35px;
                     right: 14px;
@@ -617,7 +644,7 @@
         -o-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
         -moz-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
         -webkit-box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 10px 0px;
-        @include user-select-none();
+        @include user-select(none);
     
         &:hover {
             transition: .5s;
@@ -632,20 +659,20 @@
 
         .box-item__icon {
             font-size: 60px;
-            @include font-family($font-vazir-Bold);
+            @include font($font-vazir-Bold);
         }
 
         .box-item__title {
             border-top: 1px solid #e8e8e88f;
             padding: 30px 8px 20px 8px;
             font-size: 22px;
-            @include font-family($font-vazir-Medium);
+            @include font($font-vazir-Medium);
         }
 
         .box-item__body {
             margin: 10px 30px 30px 0;
             text-align: right;
-            @include font-family($font-vazir-Light);
+            @include font($font-vazir-Light);
         }
     }
 }
@@ -680,8 +707,8 @@
     margin: 0 auto 0 auto;
     border-radius: 20px;
     width: 90%;
-    @include user-select-none();
-    @include font-family($font-vazir-Medium);
+    @include user-select(none);
+    @include font($font-vazir-Medium);
     direction: ltr;
     position: fixed;
 
@@ -955,7 +982,7 @@ a {
         padding: 4px 8px;
         color: #ccc;
         font-size: 15px;
-        @include font-family($font-vazir-Thin);
+        @include font($font-vazir-Thin);
         margin: 5px 10px;
         bottom: 8px;
         left: 4px;
