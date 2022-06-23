@@ -5,6 +5,16 @@ $font-vazir-Regular: "Vazir-Regular";
 $font-vazir-Medium: "Vazir-Medium";
 $font-vazir-Bold: "Vazir-Bold";
 
+// Prefix          Browser
+
+// -webkit-        For safari browser, Android Browser
+
+// -moz-           For Firefox Browser
+
+// -o-             For opera Browser
+
+// -ms-            For Microsoft Edge, Internet Explorer
+
 @mixin font($famliy,$size,$width) {
     font-family: $famliy;
     -o-font-family: $famliy;
