@@ -190,8 +190,7 @@
 
     &__title {
         padding: 2px 6px 2px 2px;
-        font-size: 30px;
-        @include font($font-vazir-Medium);
+        @include font($font-vazir-Regular,30px);
     }
 
     &__avatar {
@@ -207,6 +206,10 @@
         line-height: 2;
         @include font($font-vazir-Regular);
         font-size: 18px;
+
+        h1 ,h2 ,h3 ,h4 ,h5 ,h6{
+            @include font($font-vazir-Bold);
+        }
     }
 }
 
@@ -636,6 +639,10 @@ p {
 a {
     text-decoration: none;
     color: var(--color);
+
+    &:hover {
+        color: rgb(178, 178, 178);
+    }
 }
 
 
@@ -651,7 +658,7 @@ a {
 }
 
 .min-text {
-    font-size: 16px !important;
+    @include font($font-vazir-Thin,16px,400);
 }
 
 .rtl {
