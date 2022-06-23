@@ -78,7 +78,7 @@ $font-vazir-Bold: "Vazir-Bold";
     -webkit-box-shadow: $parametrs;
 }
 
-@mixin transition($parametrs...) {
+@mixin transition($parametrs...:.5s) {
     transition: $parametrs;
     -o-transition: $parametrs;
     -ms-transition: $parametrs;
