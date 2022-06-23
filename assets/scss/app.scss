@@ -88,7 +88,7 @@
 
     &__text, &__link {
         display: inline;
-        font-size: 15px;
+        @include font(null,15px,null);
         @include user-select(none);
         cursor: not-allowed;
         color: #fff;
