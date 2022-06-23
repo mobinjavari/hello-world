@@ -15,7 +15,7 @@ $font-vazir-Bold: "Vazir-Bold";
 
 // -ms-            For Microsoft Edge, Internet Explorer
 
-@mixin font($famliy,$size,$width) {
+@mixin font($famliy:$font-vazir-medium,$size:auto,$weight:auto) {
     font-family: $famliy;
     -o-font-family: $famliy;
     -ms-font-family: $famliy;
@@ -28,11 +28,11 @@ $font-vazir-Bold: "Vazir-Bold";
     -moz-font-size: $size;
     -webkit-font-size: $size;
 
-    font-weight: $width;
-    -o-font-weight: $width;
-    -ms-font-weight: $width;
-    -moz-font-weight: $width;
-    -webkit-font-weight: $width;
+    font-weight: $weight;
+    -o-font-weight: $weight;
+    -ms-font-weight: $weight;
+    -moz-font-weight: $weight;
+    -webkit-font-weight: $weight;
 }
 
 @mixin background($parametrs...) {
@@ -43,7 +43,7 @@ $font-vazir-Bold: "Vazir-Bold";
     -webkit-background: $parametrs;
 }
 
-@mixin user-select-none($parametrs) {
+@mixin user-select($parametrs:none) {
     user-select: $parametrs;
     -o-user-select: $parametrs;
     -ms-user-select: $parametrs;
@@ -62,7 +62,7 @@ $font-vazir-Bold: "Vazir-Bold";
     -webkit-user-zoom: $parametrs;
 }
 
-@mixin box-sizing($parametrs) {
+@mixin box-sizing($parametrs:border-box) {
     box-sizing: $parametrs;
     -o-box-sizing: $parametrs;
     -ms-box-sizing: $parametrs;
