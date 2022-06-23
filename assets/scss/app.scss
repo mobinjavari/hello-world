@@ -4,7 +4,8 @@
 
 /* About Developer : Https://MobinJavari.IR/ */
 
-@import "_var.scss";
+@import "var";
+@import "font";
 
 :root {
     color-scheme:dark;
@@ -56,31 +57,6 @@
     border: 0;
     outline: 0;
     @include box-sizing(border-box);
-}
-
-@font-face {
-    font-family: "Vazir-Thin";
-    src: url("../font/vazir/Vazir-Thin.woff");
-}
-@font-face {
-    font-family: "Vazir-Light";
-    src: url("../font/vazir/Vazir-Light.woff");
-}
-@font-face {
-    font-family: "Vazir-Variable";
-    src: url("../font/vazir/Vazir-Variable.woff");
-}
-@font-face {
-    font-family: "Vazir-Regular";
-    src: url("../font/vazir/Vazir-Regular.woff");
-}
-@font-face {
-    font-family: "Vazir-Medium";
-    src: url("../font/vazir/Vazir-Medium.woff");
-}
-@font-face {
-    font-family: "Vazir-Bold";
-    src: url("../font/vazir/Vazir-Bold.woff");
 }
 
 /* Body Style's */
