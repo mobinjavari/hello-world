@@ -906,18 +906,11 @@ a {
         -webkit-white-space: nowrap;
         -ms-white-space: nowrap;
 
-        border: 1px solid rgba(204, 204, 204, 0.068);
         border-radius: 5px;
-        -webkit-border-radius: 5px;
-        
-        @include box-shadow(rgba(0, 0, 0, 0.2) 9px 9px 15px 4px);
+        border: 1px solid rgba(204, 204, 204, 0.068);
 
-        backdrop-filter: blur(40px);
-        -o-backdrop-filter: blur(40px);
-        -moz-backdrop-filter: blur(40px);
-        -ms-backdrop-filter: blur(40px);
-        -webkit-backdrop-filter: blur(40px);
-    
+        @include backdrop-filter(blur(40px));
+        @include box-shadow(rgba(0, 0, 0, 0.2) 9px 9px 15px 4px);
         @include background(linear-gradient(to right, #32323285, #27272785));
 
         opacity: 0;
