@@ -317,11 +317,7 @@
                 bottom: 10px;
                 left: 5px;
                 z-index: 1;
-                object-fit:cover;
-                -o-object-fit: cover;
-                -ms-object-fit: cover;
-                -moz-object-fit: cover;
-                -webkit-object-fit: cover;
+                @include object-fit(cover);
                 @include user-select(none);
                 cursor: no-drop;
                 @include box-shadow(rgba(0, 0, 0, 0.2) 9px 9px 10px 0px);
@@ -523,10 +519,7 @@
                     bottom: 30px;
                     left: 20px;
                     z-index: 1;
-                    object-fit:cover;
-                    -o-object-fit: cover;
-                    -moz-object-fit: cover;
-                    -webkit-object-fit: cover;
+                    @include object-fit(cover);
                     @include user-select(none);
                     cursor: not-allowed;
                     @include box-shadow(rgba($color: #000000, $alpha: .2) 9px 9px 10px 0px);
@@ -663,7 +656,7 @@ a {
     margin: 5px auto;
 }
 
-.mini-text {
+.min-text {
     font-size: 16px !important;
 }
 
