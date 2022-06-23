@@ -78,10 +78,18 @@ $font-vazir-Bold: "Vazir-Bold";
     -webkit-box-shadow: $parametrs;
 }
 
-@mixin transition($parametrs...:.5s) {
+@mixin transition($parametrs...) {
     transition: $parametrs;
     -o-transition: $parametrs;
     -ms-transition: $parametrs;
     -moz-transition: $parametrs;
     -webkit-transition: $parametrs;
+}
+
+@mixin backdrop-filter($parametrs:blur(10px)) {
+    backdrop-filter: $parametrs;
+    -o-backdrop-filter: $parametrs;
+    -ms-backdrop-filter: $parametrs;
+    -moz-backdrop-filter: $parametrs;
+    -webkit-backdrop-filter: $parametrs;
 }
