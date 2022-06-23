@@ -8,6 +8,12 @@
 
         --pre-box:#0000004a;
         --pre-box-hover:#0000002b;
+        --pre-font-color: #888888;
+        --pre-border-color: #ffffff12;
+        --editor-copy-bg: #7171713b;
+        --editor-circle-1: #ffffff12;
+        --editor-circle-2: #ffffff12;
+        --editor-circle-3: #ffffff3b;
 
         --box:#181818;
         --box-sub:#303030db;
@@ -26,8 +32,14 @@
         --hesder:#fff;
         --background:#fff;
 
-        --pre-box:#ccc;
-        --pre-box-hover:#ccccccaa;
+        --pre-box:#cccccc36;
+        --pre-box-hover:#cccccc50;
+        --pre-font-color: #313131;
+        --pre-border-color: #00000026; 
+        --editor-copy-bg: #424242;
+        --editor-circle-1: #242424;
+        --editor-circle-2: #2c2c2c;
+        --editor-circle-3: #000;
 
         --box:#ccc;
         --box-sub:#ddd;
@@ -226,11 +238,11 @@
         top: 10px;
         right: 28px;
         cursor: pointer;
-        background: #424242;
+        background: var(--editor-copy-bg);
         padding: 8px 10px 3px 11px;
         border-radius: 14px;
-        z-index: 10;
-        color: #fff;
+        z-index: 8;
+        color: #dbdbdb;
 
 
         span {
@@ -238,20 +250,51 @@
         }
     }
 
+    .back {
+        &__circle-1 {
+            height: 150px;
+            width: 150px;
+            border-radius: 100%;
+            background: var(--editor-circle-1);
+            position: absolute;
+            top: 8%;
+            right: 8%;
+        }
+        &__circle-2 {
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+            background: var(--editor-circle-2);
+            position: absolute;
+            top: 50%;
+            right: 30%;
+        }
+        &__circle-3 {
+            height: 50px;
+            width: 50px;
+            border-radius: 100%;
+            background: var(--editor-circle-3);
+            position: absolute;
+            top: 10%;
+            right: 46%;
+        }
+    }
+
     .pre {
 
         @include box-sizing(border-box);
-        border: 1px solid #ffffff12;
+        border: 1px solid var(--pre-border-color);
         direction: ltr;
         background-color: var(--pre-box);
         @include backdrop-filter(blur(30px));
-        color: #00AA00;
+        color: var(--pre-font-color);
         border-radius: 20px 0 0 0;
         padding: 10px 15px;
         text-align: left;
         letter-spacing: 2px;
         margin: 20px 5px 30px 5px;
         max-height: 1000px;
+        min-height: 300px;
         overflow: scroll !important;
         z-index: 1;
         
@@ -566,7 +609,7 @@
         }
 
         .box-item__title {
-            border-top: 1px solid #e8e8e88f;
+            border-top: 1px solid #6b6b6b42;
             padding: 30px 8px 20px 8px;
             @include font($font-vazir-Bold,22px);
         }
