@@ -28,6 +28,6 @@ Before reading this article, the word 'hello world' may have been a common word 
 
 <br><br><br><br>
 
-<img src="./assets/img/shot1111.png" title="Github-Hello-World" alt="Hello World Img">
-<img src="./assets/img/shot1112.png" title="Github-Hello-World" alt="Hello World Img">
-<img src="./assets/img/shot1113.png" title="Github-Hello-World" alt="Hello World Img">
+<img src="./assets/note/screenshot/shot1111.png" title="Github-Hello-World" alt="Hello World Img">
+<img src="./assets/note/screenshot/shot1112.png" title="Github-Hello-World" alt="Hello World Img">
+<img src="./assets/note/screenshot/shot1113.png" title="Github-Hello-World" alt="Hello World Img">
