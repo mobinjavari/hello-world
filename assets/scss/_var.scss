@@ -35,11 +35,12 @@ $font-vazir-Bold: "Vazir-Bold";
     -webkit-font-weight: $width;
 }
 
-@mixin background-linear-gradient($parametrs...) {
-    background: linear-gradient($parametrs);
-    -o-background: linear-gradient($parametrs);
-    -moz-background: linear-gradient($parametrs);
-    -webkit-background: linear-gradient($parametrs);
+@mixin background($parametrs...) {
+    background: $parametrs;
+    -o-background: $parametrs;
+    -ms-background: $parametrs;
+    -moz-background: $parametrs;
+    -webkit-background: $parametrs;
 }
 
 @mixin font-family($parametrs) {
