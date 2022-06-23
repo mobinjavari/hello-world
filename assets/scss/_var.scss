@@ -69,3 +69,11 @@ $font-vazir-Bold: "Vazir-Bold";
     -moz-box-sizing: $parametrs;
     -webkit-box-sizing: $parametrs;
 }
+
+@mixin box-shadow($parametrs...) {
+    box-shadow: $parametrs;
+    -o-box-shadow: $parametrs;
+    -ms-box-shadow: $parametrs;
+    -moz-box-shadow: $parametrs;
+    -webkit-box-shadow: $parametrs;
+}
