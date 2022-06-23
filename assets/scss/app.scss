@@ -245,11 +245,7 @@
 
     .pre {
 
-        box-sizing: border-box;
-        -o-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
+        @include box-sizing(border-box);
     
         direction: ltr;
         background-color: var(--pre-box);
@@ -461,9 +457,7 @@
                 border-radius: 20px;
                 margin: 10px 3% 3% 1px;
                 box-sizing: border-box;
-                -o-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
+                @include box-sizing(border-box);
                 @include font($font-vazir-Medium);
                 font-size: 15px;
                 cursor: pointer;
@@ -914,9 +908,6 @@ a {
 
         border: 1px solid rgba(204, 204, 204, 0.068);
         border-radius: 5px;
-        -o-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         
         @include box-shadow(rgba(0, 0, 0, 0.2) 9px 9px 15px 4px);
@@ -927,11 +918,7 @@ a {
         -ms-backdrop-filter: blur(40px);
         -webkit-backdrop-filter: blur(40px);
     
-        background: linear-gradient(to right, #32323285, #27272785);
-        -o-background: linear-gradient(to right, #32323285, #27272785);
-        -moz-background: linear-gradient(to right, #32323285, #27272785);
-        -ms-background: linear-gradient(to right, #32323285, #27272785);
-        -webkit-background: linear-gradient(to right, #32323285, #27272785);
+        @include background(linear-gradient(to right, #32323285, #27272785));
 
         opacity: 0;
         visibility: hidden;
