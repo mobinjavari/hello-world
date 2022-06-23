@@ -77,3 +77,11 @@ $font-vazir-Bold: "Vazir-Bold";
     -moz-box-shadow: $parametrs;
     -webkit-box-shadow: $parametrs;
 }
+
+@mixin transition($parametrs...) {
+    transition: $parametrs;
+    -o-transition: $parametrs;
+    -ms-transition: $parametrs;
+    -moz-transition: $parametrs;
+    -webkit-transition: $parametrs;
+}
