@@ -101,12 +101,12 @@
         color: #ffffff !important;
         padding: 2px 10px;
         cursor: pointer;
-        transition: .5s;
+        @include transition(.5s);
 
         &:hover {
             background-color: #fff;
             color: #000 !important;
-            transition: .8s;
+            @include transition(.8s);
         }
     }
 }
@@ -117,7 +117,7 @@
 .header {
     
     margin-top: 60px;
-    transition: ease .7s;
+    @include transition(ease .7s);
     position: sticky;
     top: 0;
     background-color: var(--hesder);
@@ -262,20 +262,13 @@
         max-height: 1000px;
         overflow: scroll !important;
         
-        transition: .5s;
-        -o-transition: .5s;
-        -moz-transition: .5s;
-        -ms-transition: .5s;
-        -webkit-transition: .5s;
+        @include transition(.5s);
         
         @include box-shadow(rgba(0, 0, 0, 0.2) 4px 4px 10px 0px);
     
 
         &:hover {
-            transition: .5s;
-            -o-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
+            @include transition(.5s);
             background-color: var(--pre-box-hover);
         }
 
@@ -481,7 +474,7 @@
     }
 
     .toggle-show-comments{
-        transition: ease .7s;
+        @include transition(ease .7s);
         background-color: var(--box-sub);
         color: var(--color-sub);
         padding: 50px 8px 8px 8px;
@@ -511,10 +504,10 @@
     }
 
     &-list {
-        transition: ease 1s;
+        @include transition(ease 1s);
 
         .comment-item {
-            transition: ease .7s;
+            @include transition(ease .7s);
             background-color: var(--box);
             color: var(--color-sub2);
             @include box-shadow(rgba(0, 0, 0, 0.2) 4px 4px 10px 0px);
@@ -569,7 +562,7 @@
 
     .box-item {
         top: 0;
-        transition: .5s;
+        @include transition(.5s);
         background-color: var(--box);
         color: var(--color);
         border-radius: 20px;
@@ -579,10 +572,7 @@
         @include user-select(none);
     
         &:hover {
-            transition: .5s;
-            -o-transition: .5s;
-            -moz-transition: .5s;
-            -webkit-transition: .5s;
+            @include transition(.5s);
             background: linear-gradient(to right, #213672, #39519e);
             border-radius: 20px;
             padding: 10px 14px;
@@ -899,7 +889,7 @@ a {
     
     &:hover:after {
         opacity: 1;
-        transition: all 0.1s ease 0.5s;
+        @include transition( all 0.1s ease 0.5s);
         visibility: visible;
     }
 
