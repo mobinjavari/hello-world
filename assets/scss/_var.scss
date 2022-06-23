@@ -18,14 +18,19 @@ $font-vazir-Bold: "Vazir-Bold";
 @mixin font($famliy,$size,$width) {
     font-family: $famliy;
     -o-font-family: $famliy;
+    -ms-font-family: $famliy;
     -moz-font-family: $famliy;
     -webkit-font-family: $famliy;
+
     font-size: $size;
     -o-font-size: $size;
+    -ms-font-size: $size;
     -moz-font-size: $size;
     -webkit-font-size: $size;
+
     font-weight: $width;
     -o-font-weight: $width;
+    -ms-font-weight: $width;
     -moz-font-weight: $width;
     -webkit-font-weight: $width;
 }
