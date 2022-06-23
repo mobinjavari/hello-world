@@ -62,3 +62,10 @@ $font-vazir-Bold: "Vazir-Bold";
     -webkit-user-zoom: $parametrs;
 }
 
+@mixin box-sizing($parametrs) {
+    box-sizing: $parametrs;
+    -o-box-sizing: $parametrs;
+    -ms-box-sizing: $parametrs;
+    -moz-box-sizing: $parametrs;
+    -webkit-box-sizing: $parametrs;
+}
