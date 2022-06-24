@@ -298,7 +298,7 @@
       background-color: var(--pre-box);
       @include backdrop-filter(blur(30px));
       color: var(--pre-font-color);
-      border-radius: 20px 0 0 0;
+      border-radius: 20px;
       padding: 10px 15px;
       text-align: left;
       letter-spacing: 2px;
