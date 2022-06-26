@@ -7,6 +7,21 @@
 //     }
 // }
 
+:root [data-theme=light] {
+    --bg-theme: #fff;
+    --border: #dcdcdc;
+    --border-focus: #39519ea8;
+    --border-hover: #39519ec4;
+    --border-width: 2px; 
+}
+:root [data-theme=dark] {
+    --bg-theme: #303030;
+    --border: #ffffff1b;
+    --border-focus: #707070;
+    --border-hover: #606060; 
+    --border-width: 1px; 
+}
+
 p {
     line-height: 2.2;
 }
@@ -18,6 +33,271 @@ mark {
     @include background(linear-gradient(to right, #213672, #39519e));
 }
 
+label {
+    @include user-select(none !important);
+    display: inline-block;
+}
+
+input {
+    @include font($font-vazir-Light);
+
+    &[type="url"],
+    &[type="text"],
+    &[type="date"],
+    &[type="month"],
+    &[type="datetime-local"],
+    &[type="email"],
+    &[type="number"],
+    &[type="password"],
+    &[type="file"]::-webkit-file-upload-button {
+        background-color: var(--bg-theme);
+        border-radius: 10px;
+        padding: 8px 6px;
+        border: var(--border-width) solid var(--border) !important;
+    
+        &:focus {
+            border: var(--border-width) solid var(--border-focus) !important;
+        } 
+
+        &:active {
+            opacity: .9 !important;
+        }
+
+        &:hover {
+            border: var(--border-width) solid var(--border-hover) !important;
+        }
+    }
+
+    &[type="file"],
+    &[type="url"],
+    &[type="email"],
+    &[type="password"] {
+        direction: ltr;
+        text-align: left;
+    }
+
+    &[type="file"]::-webkit-file-upload-button {
+        background-color: #39519e;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        color: #fff;
+
+        &:hover {
+            border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        }
+    }    
+
+    &[type="month"],
+    &[type="date"],
+    &[type="datetime-local"] {
+        cursor: text;
+        width: auto;
+        &::-webkit-datetime-edit-text { color: #fff; padding: 0 4px; }
+        &::-webkit-calendar-picker-indicator { padding: 0 0 0 10px; cursor: pointer; }
+    }
+
+    &[type="button"] {
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 8px 6px;
+        color: #fff;
+        background-color: #39519e;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        @include font($font-vazir-Medium);
+
+        &:hover {
+            opacity: .9;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        &:active {
+            opacity: .8;
+        }
+    }
+
+    &[type="checkbox"], &[type="radio"] {
+        --active: #39519e;
+        --active-inner: #c2c2c2;
+        --focus: 2px #39519e74;
+        --border: #676767;
+        --border-hover: #39519e;
+        --disabled: #bebebe;
+        --disabled-inner: #E1E6F9;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        height: 21px;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin: 2px 0 0 6px;
+        cursor: pointer;
+        border: 1px solid var(--bc, var(--border));
+        background: var(--b, var(--bg-theme));
+        transition: background .3s, border-color .3s, box-shadow .2s;
+
+        &:after {
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            position: absolute;
+            transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+        }
+
+        &:checked {
+            --b: var(--active);
+            --bc: var(--active);
+            --d-o: .3s;
+            --d-t: .6s;
+            --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+        }
+
+        &:disabled {
+            --b: var(--disabled);
+            cursor: not-allowed;
+            opacity: .9;
+            
+            &:checked {
+                --b: var(--disabled-inner);
+                --bc: var(--border);
+            }
+            
+            & + label {
+                cursor: not-allowed;
+            }
+        }
+
+        &:hover {
+            &:not(:checked) {
+              &:not(:disabled) {
+                --bc: var(--border-hover);
+              }
+            }
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 var(--focus);
+        }
+
+        &:not(.switch) {
+            width: 21px;
+            &:after {
+                opacity: var(--o, 0);
+            }
+            &:checked {
+                --o: 1;
+            }
+        }
+
+        & + label {
+            font-size: 14px;
+            line-height: 21px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            margin-left: 4px;
+        }
+    }
+
+    &[type="checkbox"] {
+        &:not(.switch) {
+            border-radius: 7px;
+
+            &:after {
+                width: 5px;
+                height: 9px;
+                border: 2px solid var(--active-inner);
+                border-top: 0;
+                border-left: 0;
+                left: 7px;
+                top: 4px;
+                transform: rotate(var(--r, 20deg));
+            }
+          
+            &:checked {
+                --r: 43deg;
+            }
+        }
+        
+        &.switch {
+            width: 38px;
+            border-radius: 11px;
+
+            &:after {
+                left: 2px;
+                top: 2px;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                background: var(--ab, var(--border));
+                transform: translateX(var(--x, 0));
+            }
+
+            &:checked {
+                --ab: var(--active-inner);
+                --x: 17px;
+            }
+
+            &:disabled {
+                &:not(:checked) {
+                    &:after {
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+      }
+
+      &[type="radio"] {
+        border-radius: 50%;
+        
+        &:after {
+          width: 19px;
+          height: 19px;
+          border-radius: 50%;
+          background: var(--active-inner);
+          opacity: 0;
+          transform: scale(var(--s, .7));
+        }
+
+        &:checked {
+          --s: .5;
+        }
+    }
+
+    &[type="color"] {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 8px;
+        border: none;
+        border-radius: 40px !important;
+        background: none;
+
+        &:active {
+            opacity:  .8;
+        }
+
+        &::-webkit-color-swatch {
+            border: 2px solid #ffffff30;
+            border-radius: 10px;
+
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+
+    &[type="ranger"] {
+        
+    }
+
+}
+
+
 .elements {
     background-color: var(--background);
     display: block;
@@ -27,4 +307,5 @@ mark {
 .title {
     @include font($font-vazir-Medium,22px);
     list-style: circle;
+    margin: 20px 0;
 }

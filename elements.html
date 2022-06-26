@@ -53,7 +53,7 @@
   </header>
 
   <section class="site">
-    <section class="main" style="height: 800px;">
+    <section class="main">
         <section class="elements">
 
             <h1 class="title">تـــــــــگ mark</h1>
@@ -61,6 +61,73 @@
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از <mark>طراحان گرافیک</mark> است، چاپگرها و متون بلکه روزنامه و مجله در ستون و <mark>سطرآنچنان</mark> که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای <mark>کاربردی</mark> می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص <mark>طراحان خلاقی</mark>، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و <mark>شرایط سخت تایپ</mark> به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
             </p>
 
+            <h1 class="title">تـــــــــگ input</h1>
+
+            <label for="text">متن وارد کنید :</label>
+            <input type="text" name="text" id="text" placeholder="مثلا یه کلمه..." value="من یک متن هستم ...">
+            <br><br>
+            <label for="number">عدد وارد کنید :</label>
+            <input type="number" name="number" id="number" size="1000" step="100" placeholder="مثلا یه عدد..." value="" autofocus="true">
+            <br><br>
+            <label for="password">پسورد وارد کنید :</label>
+            <input type="password" name="password" id="password" placeholder="@%RF#12M=6" value="@@@@">
+            <br><br>
+            <label for="email">ایمیل وارد کنید :</label>
+            <input type="email" name="email" id="email" placeholder="mobinjavari@gmail.com" value="">
+            <br><br>
+            <label for="url">لینک وارد کنید :</label>
+            <input type="url" name="url" id="url" placeholder="https://mobinjavari.site" value="">
+            <br><br>
+
+            <input type="button" id="button" name="button" value="روی من کلیک کنید">
+            <br><br>
+
+            <input type="checkbox" id="checkbox" name="checkbox" value="true" checked>
+            <label for="checkbox">با قوانین و مقررات موافقت میکنم.</label>    
+            <br>
+            <input type="checkbox" id="checkbox" name="checkbox" value="false" disabled="true">
+            <label>چک باکس فعلا در دسترس نمی باشد لطفا بعدا امتحان نمایید (:</label>
+            <br><br>
+
+            <input type="checkbox" id="checkbox-switch" name="checkbox-switch" class="switch" value="true" checked>
+            <label for="checkbox-switch">ارسال ایمیل اطلاع رسانی (فعال/غیرفعال)</label>
+            <br>
+            <input type="checkbox" id="checkbox-switch" name="checkbox-switch" class="switch" value="true" disabled="true">
+            <label for="checkbox-switch">این قابلیت فعلا فعال نمی باشد</label>
+            <br><br>
+
+            <div>
+              <p>:: کدام ماشین را دوس دارید ::</p>
+              <input type="radio" id="BMW" name="car" value="BMW" disabled="true">
+              <label for="BMW"> ماشین BMW : (غیرفعال)</label><br>
+              <input type="radio" id="Pride" name="car" value="Pride" checked>
+              <label for="Pride">ماشین پراید : (فعال)</label><br>
+              <input type="radio" id="Neysan" name="car" value="Neysan">
+              <label for="Neysan">ماشین نیسان : (فعال)</label><br>
+            <br><br>
+
+            <label for="color">رنگ مورد نظر خود را انتخواب کنید :</label>
+            <input type="color" id="color" name="color" value="#404040">
+            <br><br>
+
+            <label for="date">تاریخ تولد خود را انتخواب نمایید :</label>
+            <input type="date" id="date" name="date" value="">
+            <br><br>
+            <label for="file">تاریخ تولد خود را انتخواب نمایید :</label>
+            <input type="month" id="file" name="file" value="">
+            <br><br>
+            <label for="datetime-local">تاریخ ثبت نام خود را انتخواب نمایید :</label>
+            <input type="datetime-local" id="datetime-local" name="datetime-local" value="">
+            <br><br>
+
+            <label for="file">تاریخ تولد خود را انتخواب نمایید :</label>
+            <input type="file" id="file" name="file" value="">
+            <br><br>
+            
+            <label for="file">سقف قیمت خود را مشخص کنید : (100/1000)</label>
+            <input type="range" id="file" step="10" min="100" max="1000" name="file" value="">
+            <br><br>
+            
         </section>
     </section>
   </section>
