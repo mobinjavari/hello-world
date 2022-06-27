@@ -688,6 +688,10 @@
     border-radius: 24px;
   }
   
+  input, textarea {
+    border: 0 !important;
+  }
+
   p {
     padding: 10px;
   }

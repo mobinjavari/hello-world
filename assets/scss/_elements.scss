@@ -51,22 +51,20 @@ input {
     &[type="password"],
     &[type="file"]::-webkit-file-upload-button {
         background-color: var(--bg-theme);
-        height: 40px;
-        width: auto;
         border-radius: 10px;
-        padding: 8px 6px;
-        border: var(--border-width) solid var(--border) !important;
+        padding: 12px 8px;
+        border: var(--border-width) solid var(--border);
     
         &:focus {
-            border: var(--border-width) solid var(--border-focus) !important;
+            border: var(--border-width) solid var(--border-focus);
         } 
 
         &:active {
-            opacity: .9 !important;
+            opacity: .9;
         }
 
         &:hover {
-            border: var(--border-width) solid var(--border-hover) !important;
+            border: var(--border-width) solid var(--border-hover);
         }
     }
 
@@ -298,6 +296,25 @@ input {
         cursor: nesw-resize;
     }
 
+}
+
+textarea {
+    background-color: var(--bg-theme);
+    border-radius: 10px;
+    padding: 12px 8px;
+    border: var(--border-width) solid var(--border);
+
+    &:focus {
+        border: var(--border-width) solid var(--border-focus);
+    } 
+
+    &:active {
+        opacity: .9;
+    }
+
+    &:hover {
+        border: var(--border-width) solid var(--border-hover);
+    }
 }
 
 
