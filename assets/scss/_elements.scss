@@ -36,7 +36,6 @@ mark {
 label{
     @include user-select(none !important);
     display: inline-block;
-    cursor: pointer;
 }
 
 input {
@@ -61,11 +60,16 @@ input {
         } 
 
         &:active {
-            opacity: .9;
+            opacity: .8;
         }
 
         &:hover {
             border: var(--border-width) solid var(--border-hover);
+            opacity: .95;
+        }
+
+        & + lable {
+            cursor: pointer;
         }
     }
 
@@ -80,12 +84,16 @@ input {
     &[type="file"]::-webkit-file-upload-button {
         background-color: #39519e;
         color: #fff;
+        border-color: transparent;
+        padding: 10px 8px;
+        cursor: pointer;
     }    
 
     &[type="month"],
     &[type="date"],
     &[type="datetime-local"] {
         cursor: text;
+        padding: 10px 8px;
         &::-webkit-datetime-edit-text {padding: 0 4px; }
         &::-webkit-calendar-picker-indicator { padding: 0 0 0 10px; cursor: pointer; }
     }
@@ -102,7 +110,7 @@ input {
         @include font($font-vazir-Medium);
 
         &:hover {
-            opacity: .9;
+            opacity: .95;
             border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
@@ -117,7 +125,7 @@ input {
         --focus: 2px #39519e74;
         --border: #676767;
         --border-hover: #39519e;
-        --disabled: #676767;
+        --disabled: #8c8c8c31;
         --disabled-inner: #E1E6F9;
 
         -webkit-appearance: none;
@@ -130,7 +138,7 @@ input {
         position: relative;
         margin: 2px 0 0 6px;
         cursor: pointer;
-        border: 1px solid var(--bc, var(--border)) !important;
+        border: 1px solid var(--bc, var(--border));
         background: var(--b, var(--bg-theme));
         transition: background .3s, border-color .3s, box-shadow .2s;
 
@@ -154,11 +162,12 @@ input {
         &:disabled {
             --b: var(--disabled);
             cursor: not-allowed;
-            opacity: .8;
-            
+            opacity: .6;
+
             &:checked {
                 --b: var(--disabled-inner);
                 --bc: var(--border);
+                border-color: transparent !important;
             }
             
             & + label {
@@ -205,7 +214,7 @@ input {
             &:after {
                 width: 5px;
                 height: 9px;
-                border: 2px solid var(--active-inner) !important;
+                border: 2px solid var(--active-inner);
                 border-top: 0;
                 border-left: 0;
                 left: 7px;
@@ -290,6 +299,12 @@ input {
 
     &[type="ranger"] {
         cursor: nesw-resize;
+    }
+
+
+    &::-webkit-input-placeholder {
+        color: var(--border-hover);
+        opacity: .5;
     }
 
 }
