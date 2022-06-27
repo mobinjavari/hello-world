@@ -8,7 +8,7 @@
 // }
 
 :root [data-theme=light] {
-    --bg-theme: #fff;
+    --bg-theme: #cacaca;
     --border: #dcdcdc;
     --border-focus: #39519ea8;
     --border-hover: #39519ec4;
@@ -33,9 +33,10 @@ mark {
     @include background(linear-gradient(to right, #213672, #39519e));
 }
 
-label {
+label{
     @include user-select(none !important);
     display: inline-block;
+    cursor: pointer;
 }
 
 input {
@@ -52,7 +53,7 @@ input {
     &[type="file"]::-webkit-file-upload-button {
         background-color: var(--bg-theme);
         border-radius: 10px;
-        padding: 12px 8px;
+        padding: 12px 8px !important;
         border: var(--border-width) solid var(--border);
     
         &:focus {
@@ -78,19 +79,14 @@ input {
 
     &[type="file"]::-webkit-file-upload-button {
         background-color: #39519e;
-        border: 1px solid rgba(255, 255, 255, 0.2) !important;
         color: #fff;
-
-        &:hover {
-            border: 1px solid rgba(255, 255, 255, 0.4) !important;
-        }
     }    
 
     &[type="month"],
     &[type="date"],
     &[type="datetime-local"] {
         cursor: text;
-        &::-webkit-datetime-edit-text { color: #fff; padding: 0 4px; }
+        &::-webkit-datetime-edit-text {padding: 0 4px; }
         &::-webkit-calendar-picker-indicator { padding: 0 0 0 10px; cursor: pointer; }
     }
 
