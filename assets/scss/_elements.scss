@@ -13,6 +13,7 @@
     --border-focus: #39519ea8;
     --border-hover: #39519ec4;
     --border-width: 2px; 
+    --color-font: #303030;
 }
 :root [data-theme=dark] {
     --bg-theme: #303030;
@@ -20,6 +21,7 @@
     --border-focus: #707070;
     --border-hover: #606060; 
     --border-width: 1px; 
+    --color-font: #cacaca;
 }
 
 p {
@@ -51,6 +53,7 @@ input {
     &[type="password"],
     &[type="file"]::-webkit-file-upload-button {
         background-color: var(--bg-theme);
+        color: var(--color-font);
         border-radius: 10px;
         padding: 12px 8px !important;
         border: var(--border-width) solid var(--border);
@@ -304,7 +307,7 @@ input {
 
     &::-webkit-input-placeholder {
         color: var(--border-hover);
-        opacity: .5;
+        opacity: .7;
     }
 
 }
@@ -313,6 +316,7 @@ textarea {
     background-color: var(--bg-theme);
     border-radius: 10px;
     padding: 12px 8px;
+    color: var(--);
     border: var(--border-width) solid var(--border);
 
     &:focus {
@@ -325,6 +329,11 @@ textarea {
 
     &:hover {
         border: var(--border-width) solid var(--border-hover);
+    }
+
+    &::-webkit-input-placeholder {
+        color: var(--border-hover);
+        opacity: .7;
     }
 }
 

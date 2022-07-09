@@ -19,7 +19,7 @@
       --box-sub: #303030db;
   
       --input-bg: #303030db;
-      --border-color: #414141;
+      --border-color: #41414163;
   
       --color: #ffffff;
       --color-sub: #c7c7c7;
@@ -47,7 +47,7 @@
       --box-sub: #ddd;
   
       --input-bg: #e2e2e2;
-      --border-color: #7c7c7c;
+      --border-color: #3636365c;
   
       --color: #101010;
       --color-sub: #202020;
@@ -439,7 +439,7 @@
   
     background-color: var(--background);
     display: block;
-    padding: 10px 10px 40px 10px;
+    padding: 10px 10px 80px 10px;
   
   
     &-box {
@@ -455,12 +455,13 @@
       .comment-form {
   
         &__title {
-  
+          
           padding: 25px 20px;
-          margin: auto 10px;
+          margin: auto 20px;
           text-align: center;
           border-bottom: 1px solid var(--border-color);
           color: var(--color);
+          opacity: .8;
           @include font($font-vazir-Medium, large, 300);
   
         }
@@ -689,7 +690,7 @@
   }
   
   input, textarea {
-    border-color: transparent !important;
+    border: 0 !important;
   }
 
   p {
@@ -701,7 +702,7 @@
     color: var(--color);
   
     &:hover {
-      color: rgb(178, 178, 178);
+      opacity: .8;
     }
   }
   
