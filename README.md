@@ -33,14 +33,20 @@
 <div align="center">
   <details>
         <summary>Toggle Dark Preaview</summary><br>
-        <img src="./assets/note/screenshots/1111.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/1112.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/1113.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/dark-1111.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/dark-1112.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/dark-1113.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/dark-1114.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/dark-1115.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/dark-1116.png" title="Github-Hello-World" alt="Hello World Img">
   </details>
   <details>
         <summary>Toggle Lignt Preaview</summary><br>
-        <img src="./assets/note/screenshots/1111.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/1112.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/1113.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/light-1111.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/light-1112.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/light-1113.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/light-1114.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/light-1115.png" title="Github-Hello-World" alt="Hello World Img">
+        <img src="./assets/note/screenshots/light-1116.png" title="Github-Hello-World" alt="Hello World Img">
   </details>
 </div>
