@@ -6,9 +6,9 @@
     <p>🔮 Have you ever noticed the mystery of this word? </p>
     <p>Before reading this article, the word 'hello world' may have been a common word for you, but it gets scary when we think about it. 🪤</p>
     <p>
-      -- Why do you think such a word is used? 👁️‍🗨️ <br/>
-      -- Could this be a clue to the future of robots? 🤖 🪦 <br/>
-      -- What do you think about this? 💭 <br/>
+      - Why do you think such a word is used? 👁️‍🗨️ <br/>
+      - Could this be a clue to the future of robots? 🤖 🪦 <br/>
+      - What do you think about this? 💭 <br/>
     </p><br>
     <h4>🤝 participation</h4>
       <p><sub>This project is released and maintained under the GPL version 3 license, and in this sense, anyone can contribute to modify or improve or even add new features to this project, as well as create different forks of the project and develop the project in A separate branch, whether free or commercial, has no obstacles</sub></p>
