@@ -29,24 +29,3 @@
     <p><sub>این پروژه تحت پروانه GPL نسخه 3 منتشر و نگه‌داری می‌شود و از این‌جهت، هرکسی می‌تواند در صورت نیاز اقدام به مشارکت برای اصلاح یا بهبود یا حتی اضافه کردن ویژگی های جدید به این پروژه کند، همچنین ایجاد فورک های مختلف از پروژه و توسعه پروژه در شاخه‌ای جدا، چه به‌صورت رایگان و چه به‌صورت تجاری، هیچگونه مانعی ندارد</sub></p>
   </div>
 </div>
-<br><br><br><br>
-<div align="center">
-  <details>
-        <summary>Toggle Dark Preaview</summary><br>
-        <img src="./assets/note/screenshots/dark-1111.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/dark-1112.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/dark-1113.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/dark-1114.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/dark-1115.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/dark-1116.png" title="Github-Hello-World" alt="Hello World Img">
-  </details>
-  <details>
-        <summary>Toggle Lignt Preaview</summary><br>
-        <img src="./assets/note/screenshots/light-1111.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/light-1112.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/light-1113.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/light-1114.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/light-1115.png" title="Github-Hello-World" alt="Hello World Img">
-        <img src="./assets/note/screenshots/light-1116.png" title="Github-Hello-World" alt="Hello World Img">
-  </details>
-</div>
