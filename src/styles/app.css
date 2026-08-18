@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans: "Vazir-Regular", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Vazir-Medium", ui-sans-serif, system-ui, sans-serif;
+  --font-code: "Cabin Sketch", ui-monospace, "Courier New", monospace;
+
+  --color-brand-start: #213672;
+  --color-brand-end: #39519e;
+}
+
+:root {
+  --bar-height: 3.25rem;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --surface-page: #f8fafc;
+  --surface-header: #ffffffee;
+  --surface-card: #ffffff;
+  --surface-card-alt: #f1f5f9;
+  --surface-input: #f1f5f9;
+  --surface-code: #f1f5f9;
+  --surface-code-hover: #e2e8f0;
+  --border-color: #e2e8f0;
+  --border-code: #0f172a1a;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-page: #0f1115;
+  --surface-header: #151821ee;
+  --surface-card: #171a22;
+  --surface-card-alt: #1f2430;
+  --surface-input: #1f2430;
+  --surface-code: #12141b;
+  --surface-code-hover: #171a22;
+  --border-color: #ffffff14;
+  --border-code: #ffffff14;
+  --text-primary: #f5f5f7;
+  --text-secondary: #c7cad1;
+  --text-muted: #8b8f9a;
+}
+
+@font-face {
+  font-family: "Vazir-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazir-Medium";
+  src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cabin Sketch";
+  src: url("https://cdn.jsdelivr.net/gh/google/fonts@3bb35f25623a157bb04dbf5fdd2b86410d81c263/ofl/cabinsketch/CabinSketch-Regular.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    background-color: var(--surface-page);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-brand-end);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .gradient-brand {
+    background-image: linear-gradient(to right, var(--color-brand-start), var(--color-brand-end));
+  }
+
+  .surface-card {
+    background-color: var(--surface-card);
+    border-color: var(--border-color);
+  }
+
+  .surface-input {
+    @apply border transition focus-visible:outline focus-visible:outline-2
+      focus-visible:outline-offset-2 focus-visible:outline-[var(--color-brand-end)];
+    background-color: var(--surface-input);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+  }
+
+  .surface-header {
+    @apply backdrop-blur;
+    background-color: var(--surface-header);
+    border-color: var(--border-color);
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-xl px-5 py-2.5 font-medium transition
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .btn-primary {
+    @apply text-white shadow-md shadow-black/10 hover:brightness-110
+      focus-visible:outline-[var(--color-brand-end)];
+    background-image: linear-gradient(to right, var(--color-brand-start), var(--color-brand-end));
+  }
+
+  .btn-secondary {
+    @apply shadow-sm hover:opacity-80 focus-visible:outline-[var(--color-brand-end)];
+    background-color: var(--surface-card-alt);
+    color: var(--text-secondary);
+  }
+
+  .code-block {
+    @apply relative isolate overflow-hidden rounded-2xl border shadow-sm;
+    background-color: var(--surface-code);
+    background-image: radial-gradient(circle at 15% 20%, var(--color-brand-end) 0%, transparent 35%);
+    background-blend-mode: soft-light;
+    border-color: var(--border-code);
+  }
+
+  .code-block__copy {
+    @apply absolute top-3 right-3 z-10 flex cursor-pointer items-center gap-2 rounded-full px-3 py-1.5
+      text-sm text-white/90 transition hover:text-white
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/70;
+    background-color: color-mix(in srgb, var(--text-primary) 25%, transparent);
+  }
+
+  .code-block pre {
+    @apply relative m-0 max-h-[32rem] overflow-auto p-5 pt-14 text-left leading-relaxed tracking-wide;
+    direction: ltr;
+    font-family: var(--font-code);
+    color: var(--text-secondary);
+  }
+
+  .prose-fa {
+    @apply text-justify leading-loose;
+    color: var(--text-secondary);
+    font-size: 1.0625rem;
+
+    & > * + * {
+      @apply mt-4;
+    }
+
+    & h3,
+    & h4 {
+      @apply mt-8 text-xl font-medium;
+      color: var(--text-primary);
+      font-family: var(--font-heading);
+    }
+
+    & blockquote {
+      @apply mt-4 rounded-xl border-r-4 px-4 py-3 italic;
+      border-color: var(--color-brand-end);
+      background-color: var(--surface-card-alt);
+    }
+
+    & mark {
+      @apply rounded px-1 py-0.5;
+      background-color: color-mix(in srgb, var(--color-brand-end) 25%, transparent);
+      color: var(--text-primary);
+    }
+
+    & a {
+      @apply underline underline-offset-2;
+      color: var(--color-brand-end);
+    }
+  }
+}

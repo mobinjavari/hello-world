@@ -1,0 +1,43 @@
+doctype html
+html(lang="fa" dir="rtl")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin)
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/solid.min.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/brands.min.css")
+    link(rel="stylesheet" href=`./css/app.css?v=${cssVersion}`)
+    link(rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon")
+
+    meta(name="description" content="programming, develop, robot, bot, hello_world, hello world, hello-world, سلام دنیا, کلمه سلام دنیا, سلامدنیا")
+    meta(name="keywords" content="hello world, Hello World, سلام دنیا, کلمه سلام دنیا")
+    meta(property="og:title" content="سلام دنیا")
+    meta(property="og:description" content="سلام دنیا, برنامه نویسی, hello world, hello-world, hello_world")
+    meta(property="og:url" content=`https://github.com/${githubUsername}/hello-world/`)
+    meta(property="og:site_name" content="Hello World")
+    meta(property="og:locale" content="fa")
+    meta(name="twitter:title" content="Hello World")
+    meta(name="twitter:description" content="programming, dev, blog, hello world")
+    meta(name="googlebot" content="index,follow")
+
+    title Hello World
+
+    script.
+      (function () {
+        var saved = document.cookie.match(/(?:^|; )theme=([^;]*)/);
+        var theme = saved ? decodeURIComponent(saved[1]) : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+
+  body
+    include partials/_promo-bar
+    include partials/_header
+
+    main
+      include partials/_article
+      include partials/_comments
+
+    include partials/_footer
+
+    script(src=`./js/app.js?v=${jsVersion}` defer)

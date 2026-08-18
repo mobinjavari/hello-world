@@ -1,0 +1,35 @@
+- const sampleComments = [{ name: "فلان فلانی", text: "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است؛ چاپگرها و متون بلکه روزنامه و مجله در ستون و سطر آن‌چنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد." }, { name: "بهمان بهمانی", text: "کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد." }, { name: "کاربر مهمان", text: "در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه‌ی راهکارهای موجود، و بهبود آن با استفاده از تکنیک‌های جدید مورد نیاز خواهد بود؛ زیرا سطح موجود از سیستم قابل تغییر است." }]
+
+section.mx-auto.max-w-4xl.px-4.py-10
+  .surface-card.rounded-2xl.border.p-5.shadow-sm(class="sm:p-6")
+    form(data-comment-form)
+      h3.m-0.text-lg.font-medium(style="color: var(--text-primary); font-family: var(--font-heading)") ایده‌های خود را با ما به اشتراک بگذارید
+      p.mt-1.text-sm(style="color: var(--text-muted)") این بخش صرفاً جهت نمایش رابط کاربریه؛ نظری که ارسال کنید جایی ذخیره یا منتشر نمی‌شه.
+
+      .mt-4.flex.flex-col.gap-3
+        div
+          label.sr-only(for="name") نام
+          input#name.surface-input.w-full.rounded-xl.px-4.text-right(type="text" name="name" dir="auto" placeholder="نام خود را وارد کنید ..." class="py-2.5")
+        div
+          label.sr-only(for="comment") نظر
+          textarea#comment.surface-input.h-28.w-full.rounded-xl.px-4.text-right(name="comment" dir="auto" placeholder="نظر خود را با ما به اشتراک بگذارید" class="py-2.5")
+
+      p.mt-2.text-sm(data-comment-notice hidden role="status" style="color: var(--color-brand-end)") این فقط یک نمایش رابط کاربریه؛ نظر شما ثبت یا ذخیره نشد.
+
+      .mt-3.text-end
+        button.btn.btn-primary(type="submit")
+          | ارسال
+          i.fas.fa-paper-plane
+
+  .mt-6.text-center
+    button.btn.btn-secondary(type="button" data-comments-toggle) مشاهده نظرات
+
+  ul.mt-6.flex.list-none.flex-col.gap-3.p-0(data-comments-list hidden)
+    each comment in sampleComments
+      li.rounded-2xl.p-4(style="background-color: var(--surface-card-alt); color: var(--text-secondary)")
+        .flex.items-center.gap-3
+          img.h-10.w-10.rounded-full.object-cover(src="./images/user-avatar.jpg" alt=`نظر ${comment.name}` width="225" height="225")
+          h4.m-0.text-sm.font-medium(style="color: var(--text-primary)")= comment.name
+        p.mt-2.text-sm.leading-relaxed
+          i.fas.fa-quote-left.ml-1(style="color: var(--color-brand-end)")
+          = comment.text

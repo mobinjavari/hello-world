@@ -1,0 +1,14 @@
+header.sticky.top-0.z-10.border-b.surface-header.shadow-sm(class="mt-(--bar-height) max-[540px]:mt-0")
+  .absolute.inset-x-0.top-0.h-1.gradient-brand.scroll-nav-effect(style="width: 0%")
+  nav.mx-auto.flex.max-w-4xl.items-center.justify-between.gap-4.px-4.py-4
+    h1.m-0.flex.items-center.gap-2.text-xl(class="sm:text-2xl")
+      a.flex.items-center.gap-2(href=`https://github.com/${githubUsername}/hello-world` style="color: var(--text-primary)")
+        i.fas.fa-globe-europe
+        span Hello World
+    ul.m-0.flex.list-none.items-center.gap-4.p-0
+      li
+        a(href=`https://github.com/${githubUsername}/hello-world` title="گیت‌هاب" style="color: var(--text-primary)")
+          i.fab.fa-github.text-lg
+      li
+        button.cursor-pointer(type="button" data-theme-toggle title="تغییر رنگ تم" style="color: var(--text-primary)")
+          i.fa-solid.fa-circle-half-stroke.text-lg

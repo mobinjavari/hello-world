@@ -1,0 +1,9 @@
+mixin code-block(code)
+  .code-block
+    button.code-block__copy(type="button" data-copy-code title="کپی کردن کد")
+      i.fa-solid.fa-clone(data-copy-icon="idle")
+      i.fa-solid.fa-check(data-copy-icon="done" hidden)
+      i.fa-solid.fa-xmark(data-copy-icon="error" hidden)
+      span کپی
+    pre
+      code= code
